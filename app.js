@@ -37,6 +37,9 @@ app.use('/test', test);
 var ateliers = require('./routes/ateliersRoute');
 app.use('/ateliersRoute', ateliers);
 
+//route pour les différentes actions possibles pour un utilisateur
+var utilisateurs = require('./routes/utilisateurs');
+app.use('/utilisateurs',utilisateurs);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
