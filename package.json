@@ -14,5 +14,17 @@
     "http-errors": "~1.6.2",
     "mongoose": "^5.2.1",
     "morgan": "~1.9.0"
-  }
+  },
+  "description": "application gestion d'ateliers cuisine",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Icezenberg/Cooking-Lab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Icezenberg/Cooking-Lab/issues"
+  },
+  "homepage": "https://github.com/Icezenberg/Cooking-Lab#readme"
 }

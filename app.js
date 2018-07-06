@@ -35,6 +35,15 @@ app.use(session({
 var test = require('./routes/routeTest');
 app.use('/test', test);
 
+
+// route qui affiche les  ateliers et les differentes actions possibles
+var ateliers = require('./routes/ateliersRoute');
+app.use('/ateliersRoute', ateliers);
+
+//route pour les différentes actions possibles pour un utilisateur
+var utilisateurs = require('./routes/utilisateurs');
+app.use('/utilisateurs',utilisateurs);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
