@@ -4,8 +4,9 @@ var mongoose = require('mongoose');
 var ateliersSchema = new mongoose.Schema ({
     id_cuisinier: [{type: mongoose.Schema.ObjectId, ref: 'roles'}],
     titre : String,
+    description : String,
     date : String,
-    Duree : String,
+    duree : String,
     nb_place_disp : String,
     nb_place_res : String,
     prix : String,
