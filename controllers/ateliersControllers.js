@@ -1,6 +1,6 @@
 //export du module
 var mongoose = require('mongoose');
-var taches = require('../models/ateliers');
+var ateliers = require('../models/ateliersModel');
 
 
 

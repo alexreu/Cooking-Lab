@@ -1,7 +1,7 @@
 var express = require ('express');
 var router = express.Router();
 
-var atliers = require("../controllers/ateliersControllers");
+var ateliers = require("../controllers/ateliersControllers");
 
 
 // route permettant d'afficher la liste des ateliers 
