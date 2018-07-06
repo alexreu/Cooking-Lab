@@ -5,9 +5,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session');
+var urlDatabase = process.env.MONGO_URL;
 
 //connexion à la base de donnée
-mongoose.connect("mongodb://<alexandre>:<alexandre974>@ds127841.mlab.com:27841/cooking-lab")
+mongoose.connect("mongodb://alexandre:alexandre974@ds127841.mlab.com:27841/cooking-lab")
     .then(() => console.log('Connexion à la BDD OK'));
 
 var app = express();
