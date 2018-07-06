@@ -21,3 +21,7 @@ ateliersController.lister= function (req, res){
     });
 
 }
+
+
+
+module.exports= ateliersController;

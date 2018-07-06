@@ -1,8 +1,8 @@
-var mongoose = ('mongoose');
+var mongoose = require('mongoose');
 
 // Schema de données de la collection ateliers
 var ateliersSchema = new mongoose.Schema ({
-    id_cuisinier: [{type: mongoose.Schema.ObjectId, ref: 'roles'}],// clé permettant de créer une jointure avec une autre collection (roles)
+    id_cuisinier: [{type: mongoose.Schema.ObjectId, ref: 'roles'}],
     titre : String,
     date : String,
     Duree : String,
