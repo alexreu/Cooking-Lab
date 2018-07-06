@@ -12,6 +12,5 @@ var ateliersSchema = new mongoose.Schema ({
     img : String
 });
 
-
 // module qui permet d'exporter le modèle du schéma de données de la collection ateliers 
 module.exports = mongoose.model("ateliers", ateliersSchema);

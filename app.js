@@ -7,9 +7,6 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var urlDatabase = process.env.MONGO_URL;
 
-
-console.log(urlDatabase);
-
 //connexion à la base de donnée
 mongoose.connect(urlDatabase)
     .then(() => console.log('Connexion à la BDD OK'));
