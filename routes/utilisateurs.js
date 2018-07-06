@@ -17,11 +17,11 @@ var utilisateur = require("../controllers/utilisateursController");
 /* GET home page. */
 //router.get('/', requireLogin, personne.list );
 
-//cree une personne
-router.get("/creer", personne.create);
+//Fonction qui crée un utilisateur
+router.get("/creer", utilisateur.create);
 
-//sauvegarder une personne
-router.post("/save", personne.save);
+//Fonction qui sauvegarde un utilisateur
+router.post("/save", utilisateur.save);
 
 // Supprimer une personne
 //router.get("/delete/:id", personne.delete);

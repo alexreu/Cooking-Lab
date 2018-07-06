@@ -23,7 +23,7 @@ utilisateursController.save = function(req, res){
         } else{
             console.log("creation utilisateur OK");
          //   req.session.success = 'Utilisateur créé et enregistré avec succès'
-            res.redirect("/personnes");
+            res.redirect("/index");
     
         } 
     });
