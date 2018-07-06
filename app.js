@@ -29,9 +29,12 @@ app.use(session({
     saveUninitialized: false
 }));
 
-var test = require('routes/routeTest');
+var test = require('./routes/routeTest');
 app.use('/test', test);
 
+
+
+app.use('/taches', taches);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
