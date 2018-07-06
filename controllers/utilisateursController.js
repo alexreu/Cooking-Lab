@@ -18,12 +18,12 @@ utilisateursController.save = function(req, res){
         if(err){
         //req.body.error = 'Echec création utilisateur'
             console.log(err);
-            res.render("../views/utilisateurs/addUtilisateur");
+            res.redirect("/#inscription-utilisateur");
 
         } else{
             console.log("creation utilisateur OK");
          //   req.session.success = 'Utilisateur créé et enregistré avec succès'
-            res.redirect("/index");
+            res.redirect("/ateliers");
     
         } 
     });
