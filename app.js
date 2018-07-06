@@ -29,8 +29,14 @@ app.use(session({
     saveUninitialized: false
 }));
 
-var test = require('routes/routeTest');
+var test = require('./routes/routeTest');
 app.use('/test', test);
+
+
+// route qui affiche les  ateliers et les differentes actions possibles
+var ateliers = require('./routes/ateliersRoute');
+app.use('/ateliersRoute', ateliers);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
