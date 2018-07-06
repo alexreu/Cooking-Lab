@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var ateliers = require('../models/ateliersModel');
 
-/*controller pour les ateliers */
+// controller atelier
 var ateliersController = {};
 
 
@@ -12,18 +12,22 @@ ateliersController.lister= function (req, res){
         if (err){
             console.log('Error: ', err);
         }else{
-            res.render("../views/ateliers/ateliers")
+            res.render("../views/ateliers/ateliers", {
+                data: ateliers
+            })
         }
     });
 
 };
 
+// fonction permettant de faire un rendu sur la vue addAteliers.ejs
 ateliersController.creer = function(req, res){
     res.render('../views/ateliers/addAteliers');
 };
 
+// fonction permettant sauvegarder les ateliers en bdd
 ateliersController.save = function(req, res){
-    var atelier = new atelier(req.body);
+    var atelier = new ateliers (req.body);
 
     atelier.save(function (err) {
         if(err){
@@ -33,8 +37,9 @@ ateliersController.save = function(req, res){
             res.redirect('/ateliersRoute');
         }
     })
-}
+};
 
 
 
+// exportation du controller
 module.exports= ateliersController;
