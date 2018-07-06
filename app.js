@@ -35,6 +35,10 @@ app.use(session({
 var test = require('./routes/routeTest');
 app.use('/test', test);
 
+// route qui mène à l'index
+var index = require('./routes/index');
+app.use('/', index);
+
 
 // route qui affiche les  ateliers et les differentes actions possibles
 var ateliers = require('./routes/ateliersRoute');
