@@ -4,11 +4,12 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+var session = require('express-session');
+var urlDatabase = process.env.MONGO_URL;
 
-//connexion
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+//connexion à la base de donnée
+mongoose.connect("mongodb://alexandre:alexandre974@ds127841.mlab.com:27841/cooking-lab")
+    .then(() => console.log('Connexion à la BDD OK'));
 
 var app = express();
 
@@ -21,9 +22,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//utilisation des sessions
+app.use(session({
+    secret: 'Work Hard',
+    resave: true,
+    saveUninitialized: false
+}));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+var test = require('routes/routeTest');
+app.use('/test', test);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
