@@ -5,12 +5,14 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session');
+var MongoStore = require('connect-mongo')(session);
 var urlDatabase = process.env.MONGO_URI;
 
 //connexion à la base de donnée
 mongoose.connect(urlDatabase, {useNewUrlParser: true})
     .then(() => console.log('Connexion à la BDD OK'));
 
+var db = mongoose.connection;
 var app = express();
 
 // view engine setup
@@ -26,7 +28,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
     secret: 'Work Hard',
     resave: true,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new MongoStore({
+        mongooseConnection: db
+    })
 }));
 
 var test = require('./routes/routeTest');
