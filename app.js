@@ -8,7 +8,7 @@ var session = require('express-session');
 var urlDatabase = process.env.MONGO_URI;
 
 //connexion à la base de donnée
-mongoose.connect(urlDatabase)
+mongoose.connect(urlDatabase, {useNewUrlParser: true})
     .then(() => console.log('Connexion à la BDD OK'));
 
 var app = express();
