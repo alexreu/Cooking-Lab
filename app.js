@@ -15,7 +15,8 @@ console.log(uri);
 
 (async function() {
 	try {
-		await mongoose.connect(uri,{ useNewUrlParser: true });
+		await mongoose.connect('mongodb://alexandre:alexandre974@ds127841.mlab.com:27841/cooking-lab'
+	,{ useNewUrlParser: true });
 	    console.log('Connexion à la BDD OK');
 	} catch(e) {
 		console.error(e)
