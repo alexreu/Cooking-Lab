@@ -9,8 +9,18 @@ var MongoStore = require('connect-mongo')(session);
 var urlDatabase = process.env.MONGO_URI;
 
 //connexion à la base de donnée
-mongoose.connect(urlDatabase, {useNewUrlParser: true})
-    .then(() => console.log('Connexion à la BDD OK'));
+// mongoose.connect(urlDatabase, {useNewUrlParser: true})
+
+
+(async function() {
+	try {
+		await mongoose.connect(urlDatabase,{ useNewUrlParser: true });
+	    console.log('Connexion à la BDD OK');
+	} catch(e) {
+		console.error(e)
+	}
+
+})();
 
 var db = mongoose.connection;
 var app = express();
