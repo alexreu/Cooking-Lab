@@ -8,6 +8,8 @@ $(function(){
 		var date = button.data('date');
 		var prix = button.data('prix');
 		var id = button.data('id');
+		var img = button.data('img');
+		console.log(img);
 
 		var modal = $(this);
 
@@ -18,5 +20,6 @@ $(function(){
 		modal.find('#date').val(date);
 		modal.find('#prix').val(prix);
 		modal.find('#idAtelier').val(id);
+		modal.find('#currentImg').val(img);
 	})
 });

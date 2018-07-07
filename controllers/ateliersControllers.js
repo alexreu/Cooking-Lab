@@ -48,7 +48,6 @@ ateliersController.save = function(req, res){
 	};
 	// utilisation de l'objet document pour creer un nouvel ateliers
 	var atelier = new ateliers(document);
-
 	atelier.save(function (err) {
 		if(err){
 			console.log("err =>", err);
@@ -62,13 +61,17 @@ ateliersController.save = function(req, res){
 // fonction permettant d'éditer un atelier
 ateliersController.edit = function(req, res){
 	// fonction qui permet de deplacer l'image uploader dans un dossier précis
-	var img = req.files.img;
-	console.log(img);
-	img.mv('public/img/uploads/'+img.name , function (err) {
-		if(err){
-			console.log("error =>", err)
-		}
-	});
+	// si on change l'image alors on execute la fonction
+	if(req.files.img){
+		var img = req.files.img;
+		console.log(img);
+		img.mv('public/img/uploads/'+img.name , function (err) {
+			if(err){
+				console.log("error =>", err)
+			}
+		});
+	}
+	console.log(req.body.img);
 	// recuperation des tous les champs du formulaire à editer
 	var id = req.body.idAtelier;
 	var titre = req.body.titre;
@@ -77,7 +80,12 @@ ateliersController.edit = function(req, res){
 	var duree = req.body.duree;
 	var date = req.body.date;
 	var prix = req.body.prix;
-	var img = req.files.img.name;
+	// si on change d'image alors l'image ce change sinon on conserve la meme image
+	if (req.files.img){
+		var img = req.files.img.name;
+	}else {
+		var img = req.body.currentImg;
+	}
 
 	ateliers.findByIdAndUpdate(id, {
 		$set: {
