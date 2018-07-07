@@ -1,7 +1,6 @@
 //export du module
 var mongoose = require('mongoose');
 var ateliers = require('../models/ateliersModel');
-var fs = require('fs');
 
 // controller atelier
 var ateliersController = {};
@@ -28,6 +27,7 @@ ateliersController.creer = function(req, res){
 
 // fonction permettant sauvegarder les ateliers en bdd
 ateliersController.save = function(req, res){
+	// fonction qui permet de deplacer l'image uploader dans un dossier précis
 	var img = req.files.img;
 	console.log(img);
 	img.mv('public/img/uploads/'+img.name , function (err) {
@@ -35,6 +35,7 @@ ateliersController.save = function(req, res){
 			console.log("error =>", err)
 		}
 	});
+	// creation d'un object document
 	var document = {
 		titre : req.body.titre,
 		description : req.body.description,
@@ -45,8 +46,7 @@ ateliersController.save = function(req, res){
 		prix : req.body.prix,
 		img : req.files.img.name,
 	};
-	//console.log(document);
-
+	// utilisation de l'objet document pour creer un nouvel ateliers
 	var atelier = new ateliers(document);
 
 	atelier.save(function (err) {
@@ -61,6 +61,15 @@ ateliersController.save = function(req, res){
 
 // fonction permettant d'éditer un atelier
 ateliersController.edit = function(req, res){
+	// fonction qui permet de deplacer l'image uploader dans un dossier précis
+	var img = req.files.img;
+	console.log(img);
+	img.mv('public/img/uploads/'+img.name , function (err) {
+		if(err){
+			console.log("error =>", err)
+		}
+	});
+	// recuperation des tous les champs du formulaire à editer
 	var id = req.body.idAtelier;
 	var titre = req.body.titre;
 	var description = req.body.description;
@@ -68,14 +77,17 @@ ateliersController.edit = function(req, res){
 	var duree = req.body.duree;
 	var date = req.body.date;
 	var prix = req.body.prix;
+	var img = req.files.img.name;
+
 	ateliers.findByIdAndUpdate(id, {
 		$set: {
-			titre : titre,
-			description : description,
-			nb_place_disp : nb_place_disp,
-			duree : duree,
-			date : date,
-			prix : prix,
+			titre: titre,
+			description: description,
+			nb_place_disp: nb_place_disp,
+			duree: duree,
+			date: date,
+			prix: prix,
+			img: img,
 		}
 	}, function (err) {
 		if(!err){
