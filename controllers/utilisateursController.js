@@ -52,6 +52,7 @@ utilisateursController.login = function(req, res){
 	console.log(email);
 	console.log(password);
 	utilisateurs.findOne({email: email }).exec(function (err, user) {
+		console.log(err, user);
 		if(!err && user){
 			bcrypt.compare(password, user.password, function (err, result) {
 				if(result === true){

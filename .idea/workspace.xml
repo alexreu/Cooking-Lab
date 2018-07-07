@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f06f82-92d3-41ae-b2e0-da5dc7a7e412" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/utilisateursController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/utilisateursController.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="utilisateursController.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/utilisateursController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="802">
-              <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+            <state relative-caret-position="382">
+              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -59,7 +59,6 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/models/utilisateurs.js" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
-        <option value="$PROJECT_DIR$/controllers/utilisateursController.js" />
         <option value="$PROJECT_DIR$/routes/utilisateurs.js" />
         <option value="$PROJECT_DIR$/models/groupesModel.js" />
         <option value="$PROJECT_DIR$/models/rolesModel.js" />
@@ -70,6 +69,7 @@
         <option value="$PROJECT_DIR$/routes/ateliersRoute.js" />
         <option value="$PROJECT_DIR$/views/ateliers/addAteliers.ejs" />
         <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
+        <option value="$PROJECT_DIR$/controllers/utilisateursController.js" />
       </list>
     </option>
   </component>
@@ -186,24 +186,25 @@
       <workItem from="1530951497362" duration="1141000" />
       <workItem from="1530952699294" duration="1294000" />
       <workItem from="1530955074588" duration="18324000" />
-      <workItem from="1530976455302" duration="320000" />
+      <workItem from="1530976455302" duration="620000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32347000" />
+    <option name="totallyTimeSpent" value="32647000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1734" height="1400" extended-state="0" />
+    <frame x="-5" y="0" width="1732" height="1407" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14726426" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1474359" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28514695" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27192277" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2704" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -561,8 +562,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/utilisateursController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="802">
-          <caret line="71" column="19" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="19" />
+        <state relative-caret-position="382">
+          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
         </state>
       </provider>
     </entry>
