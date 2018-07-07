@@ -10,7 +10,7 @@ var ateliersSchema = new mongoose.Schema ({
     nb_place_disp : String,
     nb_place_res : String,
     prix : String,
-    img : String
+    img : String,
 });
 
 
