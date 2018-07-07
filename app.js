@@ -36,7 +36,6 @@ app.use('/test', test);
 var index = require('./routes/index');
 app.use('/', index);
 
-
 // route qui affiche les  ateliers et les differentes actions possibles
 var ateliers = require('./routes/ateliersRoute');
 app.use('/ateliersRoute', ateliers);

@@ -6,7 +6,8 @@ var utilisateursSchema = new mongoose.Schema({
     prenom : String,
     email: String, 
     telephone : String,
-    specialite : String,   
+	password: String,
+	passwordConf: String
         
 });
 

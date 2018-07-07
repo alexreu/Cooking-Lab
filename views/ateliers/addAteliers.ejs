@@ -1,15 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
 <form action="/ateliersRoute/save" method="post">
-    <label for="titre">Titre de l'atelier</label>
-    <input type="text" name="titre" id="titre">
-    <label for="date">Date de debut de l'atelier</label>
-    <input type="text" name="date" id="date">
-    <label for="duree">Durée de l'atelier</label>
-    <input type="text" name="duree" id="duree">
-    <label for="nb_place_disp">nombre de place disponible</label>
-    <input type="text" name="nb_place_disp" id="nb_place_disp">
-    <label for="nb_place_res">nombre de place restante</label>
-    <input type="text" name="nb_place_res" id="nb_place_res">
-    <label for="prix">prix</label>
-    <input type="number" name="prix" id="prix">
+    <div class="form-group">
+        <label for="titre">Titre de l'atelier</label>
+        <input class="form-control" type="text" name="titre" id="titre" required>
+    </div>
+    <div class="form-group">
+        <label for="titre">Description de l'atelier</label>
+        <input class="form-control" type="text" name="description" id="description" required>
+    </div>
+    <div class="form-group">
+        <label for="date">Date de debut de l'atelier</label>
+        <input class="form-control" type="date" name="date" id="date" required>
+    </div>
+    <div class="form-group">
+        <label for="duree">Durée de l'atelier</label>
+        <input class="form-control" type="number" name="duree" id="duree" required>
+    </div>
+    <div class="form-group">
+        <label for="nb_place_disp">nombre de place disponible</label>
+        <input class="form-control" type="text" name="nb_place_disp" id="nb_place_disp" required>
+    </div>
+    <div class="form-group">
+        <label for="nb_place_res">nombre de place restante</label>
+        <input class="form-control" type="text" name="nb_place_res" id="nb_place_res" required>
+    </div>
+    <div class="form-group">
+        <label for="prix">prix</label>
+        <input class="form-control" type="number" name="prix" id="prix" required>
+    </div>
+    <div class="form-group">
+        <label for="image">Image</label>
+        <input class="form-control-file" type="file" name="img" id="img">
+    </div>
     <button type="submit">Envoyer</button>
 </form>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
