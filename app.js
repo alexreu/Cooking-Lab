@@ -7,7 +7,8 @@ var mongoose = require('mongoose');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var urlDatabase = process.env.MONGO_URI;
-
+var uri = encodeURI(urlDatabase);
+console.log(uri);
 //connexion à la base de donnée
 // mongoose.connect(urlDatabase, {useNewUrlParser: true})
 
