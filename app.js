@@ -15,7 +15,7 @@ console.log(uri);
 
 (async function() {
 	try {
-		await mongoose.connect(urlDatabase,{ useNewUrlParser: true });
+		await mongoose.connect(uri,{ useNewUrlParser: true });
 	    console.log('Connexion à la BDD OK');
 	} catch(e) {
 		console.error(e)
