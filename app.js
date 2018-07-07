@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var urlDatabase = process.env.MONGO_URL;
+var urlDatabase = process.env.MONGO_URI;
 
 //connexion à la base de donnée
 mongoose.connect(urlDatabase)
