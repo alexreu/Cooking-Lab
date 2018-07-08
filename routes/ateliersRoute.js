@@ -26,8 +26,11 @@ router.post('/save', requireLogin, ateliers.save);
 // route peremettant d'éditer un atelier
 router.post('/edit', requireLogin, ateliers.edit);
 
-// // route peremmant de désactiver un atelier 
-// route.get('/desactiver', ateliers.desactiver);
+// route peremmant de désactiver un atelier
+router.get('/desactiver/:id', ateliers.desactiver);
+
+// route peremmant d'activer un atelier
+router.get('/activer/:id', ateliers.activer);
 
 
 // module permettant d'exporter router

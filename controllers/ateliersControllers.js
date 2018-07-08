@@ -80,7 +80,7 @@ ateliersController.edit = function(req, res){
 	var duree = req.body.duree;
 	var date = req.body.date;
 	var prix = req.body.prix;
-	// si on change d'image alors l'image ce change sinon on conserve la meme image
+	// si on change d'image alors l'image se change sinon on conserve la meme image
 	if (req.files.img){
 		var img = req.files.img.name;
 	}else {
@@ -106,6 +106,39 @@ ateliersController.edit = function(req, res){
 	})
 };
 
+// desactiver de l'atelier
+ateliersController.desactiver = function(req, res){
+	var id = req.params.id;
 
+	ateliers.findByIdAndUpdate(id, {
+		$set: {
+			statut: false,
+		}
+	}, function (err) {
+		if(!err){
+			res.redirect('/ateliersRoute');
+		}else{
+			console.log("error =>", err);
+			res.redirect('/ateliersRoute');
+		}
+	})
+};
+
+// fonction permettant d'activer un atelier desactiver
+ateliersController.activer = function(req, res){
+	var id = req.params.id;
+	ateliers.findByIdAndUpdate(id, {
+		$set: {
+			statut: true,
+		}
+	}, function (err) {
+		if(!err){
+			res.redirect('/ateliersRoute');
+		}else{
+			console.log('error =>', err);
+			res.redirect('/ateliersRoute');
+		}
+	})
+};
 // exportation du controller
 module.exports= ateliersController;
