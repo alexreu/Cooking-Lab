@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12f06f82-92d3-41ae-b2e0-da5dc7a7e412" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/ateliersControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ateliersControllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/ateliersModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ateliersModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/ateliers/ateliers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/ateliers/ateliers.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.7064439">
+    <splitter split-orientation="horizontal" split-proportion="0.5417661">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
@@ -42,8 +39,8 @@
           <file leaf-file-name="ateliersControllers.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="196">
-                  <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+                <state relative-caret-position="-364">
+                  <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -51,7 +48,7 @@
           <file leaf-file-name="ateliers.ejs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="56">
+                <state relative-caret-position="32">
                   <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -103,7 +100,7 @@
           <file leaf-file-name="ateliersModel.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="84">
+                <state relative-caret-position="109">
                   <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
                 </state>
               </provider>
@@ -112,8 +109,8 @@
           <file leaf-file-name="ateliersRoute.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/routes/ateliersRoute.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="392">
-                  <caret line="14" selection-start-line="14" selection-end-line="14" />
+                <state relative-caret-position="32">
+                  <caret line="10" column="18" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="18" />
                 </state>
               </provider>
             </entry>
@@ -121,8 +118,8 @@
           <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-532">
-                  <caret line="8" selection-start-line="8" selection-end-line="8" />
+                <state relative-caret-position="308">
+                  <caret line="41" column="23" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -146,8 +143,8 @@
         <option value="$PROJECT_DIR$/models/ateliersModel.js" />
         <option value="$PROJECT_DIR$/routes/ateliersRoute.js" />
         <option value="$PROJECT_DIR$/views/ateliers/addAteliers.ejs" />
-        <option value="$PROJECT_DIR$/controllers/ateliersControllers.js" />
         <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
+        <option value="$PROJECT_DIR$/controllers/ateliersControllers.js" />
       </list>
     </option>
   </component>
@@ -172,10 +169,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="2183" />
-    <option name="height" value="1403" />
+    <option name="x" value="464" />
+    <option name="y" value="-1092" />
+    <option name="width" value="863" />
+    <option name="height" value="531" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,25 +258,25 @@
       <updated>1530864102730</updated>
       <workItem from="1530864104322" duration="2205000" />
       <workItem from="1530871527395" duration="4347000" />
-      <workItem from="1530876677812" duration="4520000" />
+      <workItem from="1530876677812" duration="6278000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11072000" />
+    <option name="totallyTimeSpent" value="12830000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1455" height="935" extended-state="6" />
+    <frame x="8" y="-1088" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12768911" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09583333" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2858732" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27307692" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.23692992" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -382,27 +379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-532">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/ateliersRoute.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ateliers/addAteliers.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -412,14 +388,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="-364">
+          <caret line="5" column="28" lean-forward="true" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/ateliersRoute.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
+        <state relative-caret-position="32">
           <caret line="14" column="19" lean-forward="true" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
