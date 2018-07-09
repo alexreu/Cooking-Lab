@@ -2,7 +2,8 @@ var mongoose = ('mongoose');
 
 // Schema de données de la collection ateliers
 var groupesSchema = new mongoose.Schema ({
-    cuisinier: String,
+    id_utilisateur: [{type: mongoose.Schema.ObjectId, ref:'utilisateurs'}],
+    id_role: [{type: mongoose.Schema.ObjectId, ref: 'roles'}]
 
 });
 

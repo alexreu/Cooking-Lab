@@ -4,19 +4,23 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mongoose = require('mongoose');
+const fileUpload = require('express-fileupload');
 var session = require('express-session');
-var urlDatabase = process.env.MONGO_URL;
+var MongoStore = require('connect-mongo')(session);
+var urlDatabase = process.env.MONGO_URI;
+console.log(urlDatabase);
 
 //connexion à la base de donnée
-mongoose.connect(urlDatabase)
-    .then(() => console.log('Connexion à la BDD OK'));
+mongoose.connect(urlDatabase, {useNewUrlParser: true});
 
+var db = mongoose.connection;
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
+app.use(fileUpload());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -26,7 +30,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
     secret: 'Work Hard',
     resave: true,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store: new MongoStore({
+        mongooseConnection: db
+    })
 }));
 
 var test = require('./routes/routeTest');
@@ -35,7 +42,6 @@ app.use('/test', test);
 // route qui mène à l'index
 var index = require('./routes/index');
 app.use('/', index);
-
 
 // route qui affiche les  ateliers et les differentes actions possibles
 var ateliers = require('./routes/ateliersRoute');

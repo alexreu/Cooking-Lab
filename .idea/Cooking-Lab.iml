@@ -11,7 +11,9 @@
     <orderEntry type="library" name="@types/bootstrap" level="application" />
     <orderEntry type="library" name="@types/ejs" level="application" />
     <orderEntry type="library" name="@types/express" level="application" />
-    <orderEntry type="library" name="@types/jquery" level="application" />
     <orderEntry type="library" name="@types/mongodb" level="application" />
+    <orderEntry type="library" name="@types/easy-jsend" level="application" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
+    <orderEntry type="library" name="@types/mongoose" level="application" />
   </component>
 </module>

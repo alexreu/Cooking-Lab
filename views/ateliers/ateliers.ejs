@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,36 +8,134 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  </head>
-  <body>
-      
+    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+</head>
+<body>
+<a href="/" class="btn btn-primary">retour accueil</a>
+<a href="/ateliersRoute/creer" class="btn btn-primary">Ajouter un atelier</a>
+<section class="container">
+    <h1 class="text-center">Atelier actif</h1>
+    <div class="row">
+        <% data.forEach(function(element){%>
+        <% if(element.statut) { %>
+        <div class="col-md-3 text-center mx-auto">
+            <div class="card" style="width: 18rem;">
+                <!-- gérer la gestion des images ajout d'une pièce jointe -->
+                <img class="card-img-top" src="img/uploads/<%=element.img%> " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><%=element.titre%></h5>
+                    <p class="card-text"> Description : <%=element.description%></p>
 
-    <% data.forEach(function(element){%>
-    <div class="card" style="width: 18rem;">
-    <!-- gérer la gestion des images ajout d'une pièce jointe -->
-        <img class="card-img-top" src=" <%=element.img%> " alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title"><%=element.titre%></h5>
-            <p class="card-text"> Description : <%=element.description%></p>
+                    <p class="card-text">Nombre de places disponibles : <%=element.nb_place_disp%></p>
+                    <p class="card-text">Nombre de places réservées : <%=element.nb_place_res%></p>
+                    <p class="card-text"><%=element.duree%> Jours</p>
+                    <p class="card-text"><%=element.date%></p>
 
-            <p class="card-text">Nombre de places disponibles : <%=element.nb_place_disp%></p>
-            <p class="card-text">Nombre de places réservées : <%=element.nb_place_res%></p>
-            <p class="card-text"><%=element.duree%></p>
-            <p class="card-text"><%=element.date%></p>
+                    <p class="card-text"><%=element.prix%>€ / personne</p>
 
-            <p class="card-text"><%=element.prix%></p>
+                    <a href="#editAtelier" data-toggle="modal" class="btn btn-primary" data-titre="<%=element.titre%>" data-description="<%=element.description%>" data-placesD="<%=element.nb_place_disp%>" data-palcesR="<%=element.nb_place_res%>" data-duree="<%=element.duree%>" data-date="<%=element.date%>" data-prix="<%=element.prix%>" data-id="<%=element._id%>" data-img="<%=element.img%>">
+                        Editer l'atelier
+                    </a>
+                    <a href="/ateliersRoute/desactiver/<%= element._id %>" class="btn btn-danger">Desactiver</a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <% }) %>
+    </div>
+</section>
+<hr class="my-5">
+<section class="container">
+    <h1 class="text-center">Atelier inactif</h1>
+    <div class="row">
+        <% data.forEach(function(element){%>
+        <% if(!element.statut) { %>
+        <div class="col-md-3 text-center mx-auto  border-success">
+            <div class="card inactive-card" style="width: 18rem;">
+                <!-- gérer la gestion des images ajout d'une pièce jointe -->
+                <img class="card-img-top" src="img/uploads/<%=element.img%> " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title"><%=element.titre%></h5>
+                    <p class="card-text"> Description : <%=element.description%></p>
 
-             <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <p class="card-text">Nombre de places disponibles : <%=element.nb_place_disp%></p>
+                    <p class="card-text">Nombre de places réservées : <%=element.nb_place_res%></p>
+                    <p class="card-text"><%=element.duree%> Jours</p>
+                    <p class="card-text"><%=element.date%></p>
 
+                    <p class="card-text"><%=element.prix%>€ / personne</p>
+
+                    <a href="#editAtelier" data-toggle="modal" class="btn btn-primary" data-titre="<%=element.titre%>" data-description="<%=element.description%>" data-placesD="<%=element.nb_place_disp%>" data-palcesR="<%=element.nb_place_res%>" data-duree="<%=element.duree%>" data-date="<%=element.date%>" data-prix="<%=element.prix%>" data-id="<%=element._id%>" data-img="<%=element.img%>">
+                        Editer l'atelier
+                    </a>
+                    <a href="/ateliersRoute/activer/<%= element._id %>" class="btn btn-success">Activer</a>
+                </div>
+            </div>
+        </div>
+        <% } %>
+        <% }) %>
+    </div>
+</section>
+
+<!-- debut modal edition atelier -->
+<div class="modal fade" id="editAtelier" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/ateliersRoute/edit" method="post" encType="multipart/form-data">
+                    <div class="form-group">
+                        <label for="titre">Titre de l'atelier</label>
+                        <input class="form-control" type="text" name="titre" id="titre">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Description de l'atelier</label>
+                        <input class="form-control" type="text" name="description" id="description">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Place Disponible</label>
+                        <input class="form-control" type="text" name="nb_place_disp" id="nb_place_disp">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Durée de l'atelier</label>
+                        <input class="form-control" type="number" name="duree" id="duree">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Date de debut de l'atelier</label>
+                        <input class="form-control" type="date" name="date" id="date">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Prix de l'atelier</label>
+                        <input class="form-control" type="text" name="prix" id="prix">
+                    </div>
+                    <div class="form-group">
+                        <label for="image">Image</label>
+                        <input class="form-control-file" type="file" name="img" id="img">
+                        <input type="hidden" id="currentImg" name="currentImg">
+                    </div>
+                    <input type="hidden" id="idAtelier" name="idAtelier">
+                    <button class="btn btn-primary">Mettre à jour</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+            </div>
         </div>
     </div>
-    <% }) %>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+</div>
+<!--fin modal edition atelier-->
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/atelier/editAtelier.js"></script>
+</body>
 </html>
 
 
