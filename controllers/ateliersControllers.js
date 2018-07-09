@@ -92,6 +92,7 @@ ateliersController.edit = function(req, res){
 			titre: titre,
 			description: description,
 			nb_place_disp: nb_place_disp,
+			nb_place_res: nb_place_res,
 			duree: duree,
 			date: date,
 			prix: prix,

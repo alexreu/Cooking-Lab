@@ -24,5 +24,7 @@ ateliersPublicsController.lister= function (req, res){
 
 
 
+
+
 // exportation du controller
 module.exports= ateliersPublicsController;
