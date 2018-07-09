@@ -45,14 +45,14 @@ app.use('/', index);
 
 // route qui affiche les ateliers disponibles à l'inscription
 var ateliersPublics = require ('./routes/index/ateliersPublicsRoute')
-app.use('/index/ateliersPublicsRoute', ateliersPublics)
+app.use('/ateliersPublicsRoute', ateliersPublics)
 
-// route qui affiche les  ateliers et les differentes actions possibles
+// route qui affiche les  ateliers et les differentes actions possibles pour le cuisinier
 var ateliers = require('./routes/ateliers/ateliersRoute');
 app.use('/ateliersRoute', ateliers);
 
 //route pour les différentes actions possibles pour un utilisateur
-var utilisateurs = require('./routes/utilisateurs');
+var utilisateurs = require('./routes/utilisateurs/utilisateurs');
 app.use('/utilisateurs',utilisateurs);
 
 // catch 404 and forward to error handler
