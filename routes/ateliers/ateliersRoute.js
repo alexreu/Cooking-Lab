@@ -1,7 +1,7 @@
 var express = require ('express');
 var router = express.Router();
 
-var ateliers = require("../controllers/ateliersControllers");
+var ateliers = require("../../controllers/ateliersControllers");
 
 // fonction qui empeche l'acces a la route si la session n'est pas definie
 function requireLogin (req, res, next) {
