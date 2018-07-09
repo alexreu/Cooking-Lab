@@ -9,8 +9,8 @@ var ateliersSchema = new mongoose.Schema ({
     duree : String,
     nb_place_disp : Number,
     nb_place_res : {
-        type: Number,
-        default: 0,
+        type : Number,
+        default : 0 
     },
     prix : String,
     img : String,

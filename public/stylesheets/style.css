@@ -1,11 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
 
-a {
-  color: #00B7FF;
+/* orange button */
+.orange {
+  color: #f3671f;
 }
+ 
+/* pink button */
+.pink {
+  border : 1px solid #d05c62;
+  border-radius : 6px ;
+  background-color : #d05c62 ;
+  color:white;
+}
+
+/* part one */
+.partone {
+  height:100vh;
+  background:url("../img/uploads/meringue.jpg"), no-repeat, top;
+
+}
+
+
 .inactive-card {
   filter: grayscale(100%);
 }
