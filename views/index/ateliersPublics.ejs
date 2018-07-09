@@ -31,7 +31,7 @@
                     <p class="card-text"><%=element.prix%>€ / personne</p>
                     <form action=/reservationsRoute/save method="post">
                         <input type="hidden" value="<%= element._id %>" name="id_atelier">
-                        <button type="sumit" class="btn btn-danger">S'inscrire </button>
+                        <button type="sumit" class="btn btn-danger" id="signin">S'inscrire </button>
                     </form>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 // export du module 
 var mongoose = require ('mongoose');
 var ateliers = require('../models/ateliersModel');
+var ateliersPrivate = require('../controllers/ateliersControllers');
 
 
 // controller ateliersP
@@ -14,10 +15,10 @@ ateliersPublicsController.lister= function (req, res){
 		if (err){
 			console.log('Error: ', err);
 		}else{
-			res.render("../views/index/ateliersPublics", {
-				data: ateliers
-			})
-		}
+            res.render("../views/index/ateliersPublics", {
+                data: ateliers
+            })
+        }
 	});
 
 };

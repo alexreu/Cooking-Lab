@@ -1,12 +1,15 @@
 // export du module 
 var mongoose = require ('mongoose');
 var reservations = require('../models/reservationsModel');
+var atelier = require('../models/ateliersModel');
 
 
 // controller ateliersP
 var reservationsController = {};
 
+reservations.schema.pre('save', function(next){
 
+})
 
 //Fonction qui permet de sauvegarder une inscription à un atelier dans la table réservation
 reservationsController.save = function (req, res){
@@ -19,7 +22,7 @@ reservationsController.save = function (req, res){
     };
     var reservation = new reservations (reservation);
 
-    reservation.save(function(err,reservations) {
+    reservation.save(function(err) {
         if(err){
             console.log("error")
         }else {

@@ -18,6 +18,8 @@ function requireLogin (req, res, next) {
 // route permettant d'afficher la liste des ateliers 
 router.get ('/', requireLogin, ateliers.lister);
 
+router.get('/test', ateliers.countReservation);
+
 // route generer la page de creation d'un atelier
 router.get('/creer', requireLogin, ateliers.creer);
 

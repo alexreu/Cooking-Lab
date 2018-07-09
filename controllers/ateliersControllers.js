@@ -1,10 +1,11 @@
 //export du module
 var mongoose = require('mongoose');
 var ateliers = require('../models/ateliersModel');
+var reservations = require('../models/reservationsModel');
 var ateliersAffecter = require('../controllers/controllerAffecter');
+
 // controller atelier
 var ateliersController = {};
-
 
 // Fonction qui permet d'afficher la liste des ateliers
 ateliersController.lister= function (req, res){
@@ -100,7 +101,6 @@ ateliersController.edit = function(req, res){
 			titre: titre,
 			description: description,
 			nb_place_disp: nb_place_disp,
-			nb_place_res: nb_place_res,
 			duree: duree,
 			date: date,
 			prix: prix,
@@ -149,5 +149,12 @@ ateliersController.activer = function(req, res){
 		}
 	})
 };
+
+ateliersController.countReservation = function(id, cb){
+    reservations.count({id_ateliers: id}, function (err, data) {
+        cb(data)
+    });
+};
+
 // exportation du controller
 module.exports= ateliersController;
