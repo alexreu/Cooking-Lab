@@ -43,8 +43,12 @@ app.use('/test', test);
 var index = require('./routes/index');
 app.use('/', index);
 
+// route qui affiche les ateliers disponibles à l'inscription
+var ateliersPublics = require ('./routes/index/ateliersPublicsRoute')
+app.use('/index/ateliersPublicsRoute', ateliersPublics)
+
 // route qui affiche les  ateliers et les differentes actions possibles
-var ateliers = require('./routes/ateliersRoute');
+var ateliers = require('./routes/ateliers/ateliersRoute');
 app.use('/ateliersRoute', ateliers);
 
 //route pour les différentes actions possibles pour un utilisateur

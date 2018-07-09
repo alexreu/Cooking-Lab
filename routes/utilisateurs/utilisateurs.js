@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 
-var utilisateur = require("../controllers/utilisateursController");
+var utilisateur = require("../../controllers/utilisateursController");
 
 //Fonction qui sauvegarde un utilisateur
 router.post("/save", utilisateur.save);
