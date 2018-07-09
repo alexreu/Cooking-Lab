@@ -5,7 +5,7 @@ var ateliers = require("../../controllers/ateliersControllers");
 
 // fonction qui empeche l'acces a la route si la session n'est pas definie
 function requireLogin (req, res, next) {
-	if (req.session && req.session.userId) {
+	if (req.session && req.session.userId && req.session.userRole === 'cuisinier') {
 		next();
 	}else {
 		var err = new Error('error 404');

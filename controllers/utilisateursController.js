@@ -8,7 +8,8 @@ var utilisateursController = {};
 utilisateursController.home = function(req, res){
     res.render('../views/index', {
         username: req.session.userName,
-	    id: req.session.userId
+	    id: req.session.userId,
+		role: req.session.userRole,
     })
 };
 
@@ -56,8 +57,10 @@ utilisateursController.login = function(req, res){
 		if(!err && user){
 			bcrypt.compare(password, user.password, function (err, result) {
 				if(result === true){
+					console.log(user.role);
 					req.session.userName = user.prenom;
 					req.session.userId = user._id;
+					req.session.userRole = user.role;
 					res.redirect('/');
 				}else {
 					console.log('err =>', err);

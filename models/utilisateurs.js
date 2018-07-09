@@ -7,7 +7,8 @@ var utilisateursSchema = new mongoose.Schema({
     email: String, 
     telephone : String,
 	password: String,
-	passwordConf: String
+	passwordConf: String,
+    role: String,
         
 });
 
