@@ -1,7 +1,7 @@
 //export du module
 var mongoose = require('mongoose');
 var ateliers = require('../models/ateliersModel');
-
+var ateliersAffecter = require('../controllers/controllerAffecter');
 // controller atelier
 var ateliersController = {};
 
@@ -28,13 +28,15 @@ ateliersController.creer = function(req, res){
 // fonction permettant sauvegarder les ateliers en bdd
 ateliersController.save = function(req, res){
 	// fonction qui permet de deplacer l'image uploader dans un dossier précis
-	var img = req.files.img;
-	console.log(img);
-	img.mv('public/img/uploads/'+img.name , function (err) {
-		if(err){
-			console.log("error =>", err)
-		}
-	});
+	if (req.files.img) {
+        var img = req.files.img;
+        //console.log(img);
+        img.mv('public/img/uploads/' + img.name, function (err) {
+            if (err) {
+                console.log("error =>", err)
+            }
+        });
+    }
 	// creation d'un object document
 	var document = {
 		titre : req.body.titre,
@@ -48,9 +50,15 @@ ateliersController.save = function(req, res){
 	};
 	// utilisation de l'objet document pour creer un nouvel ateliers
 	var atelier = new ateliers(document);
-	atelier.save(function (err) {
+	atelier.save(function (err, result) {
+		//console.log("result =>",result);
 		if(err){
 			console.log("err =>", err);
+			var saving = {
+				id_atelier : result._id,
+				id_cuisinier : req.session.userId,
+			};
+			ateliersAffecter.save(saving);
 			res.redirect('/ateliersRoute/creer');
 		}else {
 			res.redirect('/ateliersRoute');

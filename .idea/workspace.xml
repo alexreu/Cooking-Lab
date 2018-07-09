@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f06f82-92d3-41ae-b2e0-da5dc7a7e412" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/utilisateursController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/utilisateursController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/controllerAffecter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/ateliersAffecter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ateliersControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ateliersControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ateliersModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ateliersModel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/ateliers/ateliersRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ateliers/ateliersRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.608722">
+    <splitter split-orientation="horizontal" split-proportion="0.4766808">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
@@ -33,19 +35,56 @@
           <file leaf-file-name="utilisateursController.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/controllers/utilisateursController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="308">
-                  <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+                <state relative-caret-position="364">
+                  <caret line="61" column="38" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="38" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ateliersRoute.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ateliersRoute.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/routes/ateliers/ateliersRoute.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+                <state relative-caret-position="84">
+                  <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="rolesModel.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/rolesModel.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="140">
+                  <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="utilisateurs.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/models/utilisateurs.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="15" column="45" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="45" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ateliersControllers.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="utilisateurs.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/routes/utilisateurs/utilisateurs.js">
+              <provider selected="true" editor-type-id="text-editor" />
+            </entry>
+          </file>
+          <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/routes/users/users.js">
+              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
         </leaf>
@@ -55,13 +94,31 @@
           <file leaf-file-name="ateliersModel.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
-                  <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+                <state relative-caret-position="588">
+                  <caret line="21" column="41" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="ateliersAffecter.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/models/ateliersAffecter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="224">
+                  <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="controllerAffecter.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/controllers/controllerAffecter.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="168">
+                  <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1092">
@@ -91,16 +148,19 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/ateliers/addAteliers.ejs" />
         <option value="$PROJECT_DIR$/public/js/atelier/editAtelier.js" />
-        <option value="$PROJECT_DIR$/models/ateliersModel.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/routes/ateliersRoute.js" />
-        <option value="$PROJECT_DIR$/controllers/ateliersControllers.js" />
         <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
         <option value="$PROJECT_DIR$/models/utilisateurs.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/controllers/utilisateursController.js" />
         <option value="$PROJECT_DIR$/routes/ateliers/ateliersRoute.js" />
+        <option value="$PROJECT_DIR$/models/ateliersModel.js" />
+        <option value="$PROJECT_DIR$/models/ateliersCreer.js" />
+        <option value="$PROJECT_DIR$/models/ateliersAffecter.js" />
+        <option value="$PROJECT_DIR$/controllers/ateliersControllers.js" />
+        <option value="$PROJECT_DIR$/controllers/controllerAffecter.js" />
       </list>
     </option>
   </component>
@@ -176,6 +236,18 @@
             <path>
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="utilisateurs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -239,12 +311,12 @@
       <workItem from="1531111730492" duration="475000" />
       <workItem from="1531112509137" duration="1138000" />
       <workItem from="1531114215130" duration="965000" />
-      <workItem from="1531115962944" duration="1055000" />
+      <workItem from="1531115962944" duration="7183000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53015000" />
+    <option name="totallyTimeSpent" value="59143000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="-1088" width="1936" height="1056" extended-state="6" />
@@ -276,34 +348,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/ateliers/addAteliers.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/utilisateurs/addUtilisateur.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/routeTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -544,48 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/rolesModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/utilisateurs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -600,17 +602,79 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/ateliersAffecter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/controllerAffecter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="6" column="58" lean-forward="true" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="60" column="42" lean-forward="true" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/utilisateurs/utilisateurs.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/users/users.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/utilisateursController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="35" lean-forward="true" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        <state relative-caret-position="364">
+          <caret line="61" column="38" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/ateliers/ateliersRoute.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="84">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/rolesModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/utilisateurs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="45" />
         </state>
       </provider>
     </entry>
