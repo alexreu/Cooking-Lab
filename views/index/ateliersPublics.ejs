@@ -13,7 +13,7 @@
 <body>
 <a href="/" class="btn btn-primary">retour accueil</a>
 <section class="container">
-    <h1 class="text-center">Atelier actif</h1>
+    <h1 class="text-center">Ateliers</h1>
     <div class="row">
         <% data.forEach(function(element){%>
         <% if(element.statut) { %>
@@ -29,8 +29,10 @@
                     <p class="card-text"><%=element.duree%> Jours</p>
                     <p class="card-text"><%=element.date%></p>
                     <p class="card-text"><%=element.prix%>€ / personne</p>
-                    
-                    <a href="/reservationsRoute/save/<%= element._id %>" class="btn btn-danger">S'inscrire </a>
+                    <form action=/reservationsRoute/save method="post">
+                        <input type="hidden" value="<%= element._id %>" name="id_atelier">
+                        <button type="sumit" class="btn btn-danger">S'inscrire </button>
+                    </form>
                 </div>
             </div>
         </div>

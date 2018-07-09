@@ -9,12 +9,17 @@ var reservationsController = {};
 
 
 //Fonction qui permet de sauvegarder une inscription à un atelier dans la table réservation
-reservationsController.save = function (req,res){
+reservationsController.save = function (req, res){
     var id_user = req.session.userId;
-    var id_atelier =  req.params.id;
-    console.log("premier"+req.params.id);
-    console.log("deuxième"+req.session.userId);
-    reservations.save(function(err,reservations) {
+    var id_atelier =  req.body.id_atelier;
+
+    var reservation = {
+        id_user : id_user,
+        id_ateliers: id_atelier,
+    };
+    var reservation = new reservations (reservation);
+
+    reservation.save(function(err,reservations) {
         if(err){
             console.log("error")
         }else {
@@ -23,7 +28,7 @@ reservationsController.save = function (req,res){
         }
 
     })
- }
+ };
 
 
 // exportation du controller
