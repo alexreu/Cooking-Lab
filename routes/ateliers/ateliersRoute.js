@@ -1,5 +1,6 @@
 var express = require ('express');
 var router = express.Router();
+var atelierAffecterController = require('../../controllers/controllerAffecter')
 
 var ateliers = require("../../controllers/ateliersControllers");
 
@@ -16,7 +17,7 @@ function requireLogin (req, res, next) {
 }
 
 // route permettant d'afficher la liste des ateliers 
-router.get ('/', requireLogin, ateliers.lister);
+router.get ('/', requireLogin, atelierAffecterController.lister);
 
 // route generer la page de creation d'un atelier
 router.get('/creer', requireLogin, ateliers.creer);
