@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var effectuer = require("../controllers/rolesController");
+var effectuer = require("../../controllers/rolesController");
 
 
 

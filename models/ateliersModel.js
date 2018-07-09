@@ -7,8 +7,8 @@ var ateliersSchema = new mongoose.Schema ({
     description : String,
     date : String,
     duree : String,
-    nb_place_disp : String,
-    nb_place_res : String,
+    nb_place_disp : Number,
+    nb_place_res : Number,
     prix : String,
     img : String,
     statut: {
