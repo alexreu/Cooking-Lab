@@ -8,34 +8,46 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+    <!--Stylesheet css-->
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Cooking'Lab</a>
+<nav class="navbar navbar-expand-lg container">
+    <a class="navbar-brand " href="#">
+        <img src="img/logo.png" width="80" height="80" class="d-inline-block align-top" alt="Logo marmite"> 
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto d-flex justify-content-around">
             <li class="nav-item">
-                <a class="nav-link" href="#">Accueil</a>
+                <a class="nav-link display-4 orange" href="#">Cooking'Lab</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/ateliersPublicsRoute">Ateliers</a>
+                <a class="nav-link orange" href="#">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link orange" href="/ateliersPublicsRoute">Nos ateliers</a>
             </li>
             <% if(id && role === 'cuisinier') { %>
             <li class="nav-item">
-                <a class="nav-link" href="/ateliersRoute">Je suis cuisinier</a>
+                <a class="nav-link orange" href="/ateliersRoute">Je suis cuisinier</a>
             </li>
             <% } %>
             <% if(!id && !username) { %>
             <li class="nav-item">
-                <a href="#inscription-utilisateur" data-toggle="modal" class="nav-item btn btn-outline-success">Inscription</a>
+                <a href="#inscription-utilisateur pink" data-toggle="modal" class="nav-item btn btn-outline-success">Inscription</a>
             </li>
             <li class="nav-item ml-2">
-                <a href="#connexion-utilisateur" data-toggle="modal" class="nav-item btn btn-outline-primary">Connexion</a>
+                   
+                <a href="#connexion-utilisateur pink" data-toggle="modal" class="nav-item btn btn-outline-primary"><p>Déjà inscrit ?</p>Connexion</a>
             </li>
             <% } %>
             <% if(id && username) { %>
@@ -43,12 +55,30 @@
                 <p>Bonjour : <%= username %></p>
             </li>
             <li class="nav-item">
-                <a href="/logout" class="nav-link">Deconnexion</a>
+                <a href="/logout" class="nav-link pink">Deconnexion</a>
             </li>
             <% } %>
         </ul>
     </div>
 </nav>
+
+<section class="container-fluid text-center partone align-items-center">
+    <div class="jumbotron bg-transparent ">
+        <h1 class="display-4">Healthy and Good ! Apprenez ou ré-apprenez les bases de la cuisine saine et savoureuse.</h1>
+        <p class="lead">
+            <a class="btn pink" href="#" role="button">Je crée mon compte !</a>
+        </p>
+    </div>
+</section>
+
+<section class="container text-center">
+    <p>Marre de manger des pâtes ou d'engloutir à la va-vite des plats préparés fades, onéreux et pas vraiment nutritifs ?</p>
+    <p>Cooking'Lab, ce sont des ateliers de cuisine où l'on se sent comme à la maison! Guidés par un chef cuisinier qualifié, vous expérimentez et créez votre plat, en choisissant le niveau de difficulté et les ustensiles qui vous conviennent.  Nous privilégions les produits sains, locaux et frais! Notre leitmotiv : que ce soit délicieux pour votre palais et pour votre corps! Nous mettons également un point d'honneur à ce que vous puissiez reproduire aisément les recettes chez vous. Pour que la cuisine devienne un véritable plaisir et un moment de détente dans votre journée déjà bien remplie.</p>
+    <p>Pour participer à l'un de nos cours, rien de plus simple : il vous suffit de créer un compte, et ensuite vous inscrire à l'atelier qui vous plaît. Parcourez notre liste, il y en a pour tous les goûts! Le paiement s'effectue sur place, avant de débuter l'activité. Après chaque session, vous aurez le plaisir de déguster vos réalisations en toute convivialité.</p>
+</section>
+
+
+
 
 <!-- debut modal inscription utilisateur -->
 <div class="modal fade" id="inscription-utilisateur" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
