@@ -48,7 +48,7 @@ var ateliersPublics = require ('./routes/index/ateliersPublicsRoute')
 app.use('/ateliersPublicsRoute', ateliersPublics);
 
 //route qui permet l'inscription à un atelier
-var reservations = require ('./routes/reservations/reservationsRoute');
+var reservations = require ('./routes/reservations/reservationsRoute')
 app.use('/reservationsRoute', reservations);
 
 // route qui affiche les  ateliers et les differentes actions possibles pour le cuisinier

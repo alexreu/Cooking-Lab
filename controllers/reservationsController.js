@@ -17,18 +17,25 @@ reservationsController.save = function (req, res){
         id_user : id_user,
         id_ateliers: id_atelier,
     };
+
     var reservation = new reservations (reservation);
+
 
     reservation.save(function(err,reservations) {
         if(err){
             console.log("error")
         }else {
             console.log("Inscription réussie");
+
             res.redirect('/ateliersPublicsRoute');
         }
 
     })
+
+    
  };
+
+
 
 
 // exportation du controller
