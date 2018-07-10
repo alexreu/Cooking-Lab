@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f06f82-92d3-41ae-b2e0-da5dc7a7e412" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/views/admin/atelierList.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/adminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/adminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/controllerAffecter.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controllerAffecter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/addAdmin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/addAdmin.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/admin/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/atelier/editAtelier.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/atelier/editAtelier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ateliers/ateliers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/ateliers/ateliers.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,7 +20,7 @@
     <favorites_list name="Cooking-Lab" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4966967">
+    <splitter split-orientation="horizontal" split-proportion="0.34954956">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="header.ejs" pinned="false" current-in-tab="false">
@@ -97,8 +92,8 @@
           <file leaf-file-name="controllerAffecter.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/controllers/controllerAffecter.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+                <state relative-caret-position="336">
+                  <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
                 </state>
               </provider>
             </entry>
@@ -143,11 +138,29 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="adminController.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="adminController.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="376">
+                <state relative-caret-position="420">
                   <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="editAtelier.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/public/js/atelier/editAtelier.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="336">
+                  <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ateliers.ejs" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="34" column="436" selection-start-line="34" selection-start-column="436" selection-end-line="34" selection-end-column="436" />
                 </state>
               </provider>
             </entry>
@@ -170,7 +183,6 @@
         <option value="$PROJECT_DIR$/models/groupesModel.js" />
         <option value="$PROJECT_DIR$/models/rolesModel.js" />
         <option value="$PROJECT_DIR$/controllers/uploadFile.js" />
-        <option value="$PROJECT_DIR$/public/js/atelier/editAtelier.js" />
         <option value="$PROJECT_DIR$/routes/ateliersRoute.js" />
         <option value="$PROJECT_DIR$/controllers/utilisateursController.js" />
         <option value="$PROJECT_DIR$/models/ateliersCreer.js" />
@@ -191,7 +203,6 @@
         <option value="$PROJECT_DIR$/views/admin/index.ejs" />
         <option value="$PROJECT_DIR$/public/js/admin/adminUpdateUser.js" />
         <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
         <option value="$PROJECT_DIR$/models/ateliersModel.js" />
         <option value="$PROJECT_DIR$/views/admin/userList.ejs" />
         <option value="$PROJECT_DIR$/controllers/ateliersControllers.js" />
@@ -202,6 +213,8 @@
         <option value="$PROJECT_DIR$/routes/admin/admin.js" />
         <option value="$PROJECT_DIR$/controllers/adminController.js" />
         <option value="$PROJECT_DIR$/controllers/controllerAffecter.js" />
+        <option value="$PROJECT_DIR$/public/js/atelier/editAtelier.js" />
+        <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
       </list>
     </option>
   </component>
@@ -278,35 +291,12 @@
               <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-              <item name="ateliers" type="462c0819:PsiDirectoryNode" />
+              <item name="atelier" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
@@ -366,12 +356,12 @@
       <workItem from="1531114215130" duration="965000" />
       <workItem from="1531115962944" duration="8698000" />
       <workItem from="1531195935567" duration="4037000" />
-      <workItem from="1531200026170" duration="17673000" />
+      <workItem from="1531200026170" duration="18207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89966000" />
+    <option name="totallyTimeSpent" value="90500000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="-1088" width="1936" height="1056" extended-state="6" />
@@ -467,13 +457,6 @@
     <entry file="file://$PROJECT_DIR$/controllers/uploadFile.js" />
     <entry file="file://$PROJECT_DIR$/routes/utilisateurs.js" />
     <entry file="file://$PROJECT_DIR$/public/img/uploads/V1920x1200_Blue1.jpg" />
-    <entry file="file://$PROJECT_DIR$/public/js/atelier/editAtelier.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/ateliersRoute.js" />
     <entry file="file://$PROJECT_DIR$/controllers/rolesController.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -541,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ateliers/addAteliers.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/atelier/reservAtelier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -600,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="32" column="77" lean-forward="true" selection-start-line="32" selection-start-column="77" selection-end-line="32" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/ateliers/ateliersRoute.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -623,8 +592,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/adminModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        <state relative-caret-position="84">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -694,13 +663,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/atelierList.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -708,10 +670,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="157" column="41" selection-start-line="157" selection-start-column="41" selection-end-line="157" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ateliers/addAteliers.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="34" column="58" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/controllerAffecter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        <state relative-caret-position="336">
+          <caret line="18" column="49" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/atelier/editAtelier.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="34" column="436" selection-start-line="34" selection-start-column="436" selection-end-line="34" selection-end-column="436" />
         </state>
       </provider>
     </entry>
