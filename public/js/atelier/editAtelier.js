@@ -10,7 +10,6 @@ $(function(){
 		var prix = button.data('prix');
 		var id = button.data('id');
 		var img = button.data('img');
-		console.log(time);
 
 		var modal = $(this);
 
