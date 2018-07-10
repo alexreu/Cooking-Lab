@@ -11,7 +11,7 @@ var urlDatabase = process.env.MONGO_URI;
 console.log(urlDatabase);
 
 //connexion à la base de donnée
-mongoose.connect('mongodb://alexandre:alexandre974@ds127841.mlab.com:27841/cooking-lab', {useNewUrlParser: true});
+mongoose.connect(urlDatabase, {useNewUrlParser: true});
 
 var db = mongoose.connection;
 var app = express();
@@ -62,6 +62,7 @@ app.use('/utilisateurs',utilisateurs);
 
 var admin = require('./routes/admin/admin');
 app.use('/admin', admin);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

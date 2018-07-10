@@ -3,14 +3,10 @@ var admins = require('../models/adminModel');
 var users = require('../models/utilisateurs');
 var bcrypt = require('bcrypt');
 var user = require('../models/utilisateurs');
+var atelier = require('../models/ateliersAffecter');
 
 
 var adminController = {};
-
-// rendu sur la vue creation d'admin
-adminController.creer = function (req, res) {
-    res.render('../views/admin/addAdmin')
-};
 
 // rendu sur la vue login admin
 adminController.login = function(req, res){
@@ -25,6 +21,13 @@ adminController.index = function(req, res){
     })
 };
 
+// rendu sur l'ajout d'un admin
+adminController.createAdmin = function(req, res){
+    res.render('../views/admin/addAdmin', {
+        adminId: req.session.adminId,
+        adminMail: req.session.adminMail
+    });
+};
 // fonction listing des utilisateurs
 adminController.listUser = function(req, res){
   user.find({}).exec(function (err, user) {
@@ -38,6 +41,21 @@ adminController.listUser = function(req, res){
   })
 };
 
+// fonction listing des ateliers
+adminController.listAtelier = function(req, res){
+    atelier.find({}).
+    populate('id_atelier').
+    populate('id_cuisinier').exec(function (err, atelier) {
+        console.log(atelier[15]);
+        if(!err){
+            res.render('../views/admin/atelierList', {
+                atelier: atelier,
+                adminId: req.session.adminId,
+                adminMail: req.session.adminMail
+            })
+        }
+    })
+}
 // fonction qui hash le mot de passe et qui le met en bdd
 admins.schema.pre('save', function (next) {
     var admin = this;
@@ -59,10 +77,10 @@ adminController.add = function (req, res) {
         admin.save(function (err, result) {
             console.log(result);
             if (!err) {
-                res.redirect('/admin');
+                res.redirect('/admin/index');
             } else {
                 console.log('error =>', err);
-                res.redirect('/admin/creer');
+                res.redirect('/admin/create');
             }
         })
     }
@@ -117,8 +135,32 @@ adminController.edit = function(req, res){
 };
 
 //fonction suppression utilisateur
-//adminController.delete = function(req)
-// fonction deconnexion
+adminController.delete = function(req, res){
+  var id = req.params.id;
+    user.findByIdAndDelete(id, function (err, result) {
+        console.log('utilisateur supprimé =>', result);
+        if(!err){
+            res.redirect('/admin/user');
+        }else {
+            res.redirect('/admin/user');
+        }
+    })
+};
+
+// fonction suppression d'un atelier
+adminController.deleteAtelier = function(req, res){
+  var id = req.params.id;
+  atelier.findByIdAndDelete(id, function (err, result) {
+      console.log('atelier supprimé =>', result);
+      if(!err){
+          res.redirect('/admin/atelier');
+      }else{
+          res.redirect('/admin/atelier');
+      }
+  })
+};
+
+// fonction deconnexion admin
 adminController.logout = function(req,res){
     if(req.session){
         req.session.destroy(function (err) {
@@ -131,4 +173,5 @@ adminController.logout = function(req,res){
         })
     }
 };
+
 module.exports = adminController;

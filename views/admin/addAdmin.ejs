@@ -6,27 +6,29 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
 <body>
+<% include partials/header.ejs %>
     <h1 class="text-center">ajout admin</h1>
     <section class="container">
-        <form action="/admin/add" method="post">
-            <div class="form-group">
-                <label for="email">Adresse mail</label>
-                <input type="text" name="mail" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" name="password" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Confirmation du mot de passe</label>
-                <input type="password" name="passwordConf" class="form-control" required>
-            </div>
-            <button type="submit" class="btn btn-primary">inscription</button>
-        </form>
+        <div class="col-md-8 offset-md-2">
+            <form action="/admin/add" method="post">
+                <div class="form-group">
+                    <label for="email">Adresse mail</label>
+                    <input type="text" name="mail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" name="password" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Confirmation du mot de passe</label>
+                    <input type="password" name="passwordConf" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">inscription</button>
+            </form>
+        </div>
     </section>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
