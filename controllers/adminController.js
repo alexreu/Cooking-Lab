@@ -115,6 +115,9 @@ adminController.edit = function(req, res){
         }
     })
 };
+
+//fonction suppression utilisateur
+//adminController.delete = function(req)
 // fonction deconnexion
 adminController.logout = function(req,res){
     if(req.session){

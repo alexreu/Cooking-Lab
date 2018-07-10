@@ -32,10 +32,10 @@ ateliersController.save = function(req, res){
 		nb_place_disp : req.body.nb_place_disp,
 		nb_place_res : req.body.nb_place_res,
 		duree : req.body.duree,
-		time:req.body.time,
-		date : req.body.date,
-		prix : req.body.prix,
-		img : req.files.img.name,
+		heure_debut: req.body.time,
+		date: req.body.date,
+		prix: req.body.prix,
+		img: req.files.img.name,
 	};
 	// utilisation de l'objet document pour creer un nouvel ateliers
 	var atelier = new ateliers(document);

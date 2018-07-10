@@ -10,11 +10,7 @@
 </head>
 <body>
 <% include partials/header.ejs%>
-<div>
-
-
-
-</div>
+>
 <table class="table table-hover">
     <thead>
     <tr>
@@ -34,7 +30,11 @@
         <td><%= element.email %></td>
         <td><%= element.telephone %></td>
         <td><%= element.role %></td>
-        <td><a href="#editUser" data-toggle="modal" class="btn btn-primary" data-id="<%= element._id %>" data-nom="<%= element.nom %>" data-prenom="<%= element.prenom %>" data-telephone="<%= element.telephone %>" data-role="<%= element.role %>">Editer</a></td>
+        <td>
+            <a href="#editUser" data-toggle="modal" class="btn btn-primary" data-id="<%= element._id %>" data-nom="<%= element.nom %>" data-prenom="<%= element.prenom %>" data-telephone="<%= element.telephone %>" data-role="<%= element.role %>">Editer</a>
+            <br>
+            <a href="/admin/delete/<%= element._id %>" class="btn btn-danger mt-3">Supprimer</a>
+        </td>
     </tr>
     <% }) %>
     </tbody>
