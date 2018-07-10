@@ -32,8 +32,8 @@
             <% }) %>
         </td>
         <td>
-            <% element.id_atelier.forEach(function (element) { %>
-            <a href="/admin/deleteAtelier/<%= element._id %>" class="btn btn-danger mt-3">Supprimer</a>
+            <% element.id_atelier.forEach(function (atelier) { %>
+            <a href="/admin/deleteAtelier/<%= atelier._id %>" data-id="<%= element._id %>" class="btn btn-danger mt-3 delAffect">Supprimer</a>
             <% }) %>
         </td>
     </tr>

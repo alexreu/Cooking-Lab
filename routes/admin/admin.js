@@ -35,6 +35,8 @@ router.post('/add', requireLogin, admin.add);
 
 router.post('/edit', requireLogin, admin.edit);
 
+router.post('/delAffect', requireLogin, admin.delAffect);
+
 
 
 module.exports = router;
