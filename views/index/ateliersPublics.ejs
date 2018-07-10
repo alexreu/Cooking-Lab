@@ -34,11 +34,11 @@
                     <p class="card-text"><i class="fas fa-hourglass-half orange"></i> Durée :<%=element.duree%> H</p>
                     
                     <form id="<%= element._id %>" action=/reservationsRoute/save method="post">
-                        <input type="hidden" value="<%= element._id %>" name="id_atelier" id="id_atelier">
+                        <input type="hidden" value="<%= element._id %>" name="id_atelier">
                         <% if(element.nb_place_res === element.nb_place_disp) { %>
-                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>"  disabled >S'inscrire </button>
+                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>"  disabled >Complet</button>
                         <% } else{ %>
-                        <button type="submit" class="reservButton pink" data-id="<%= element._id %>">S'inscrire </button>
+                        <button type="submit" class="reservButton pink" data-id="<%= element._id %>">S'inscrire</button>
                         <% } %>
                     </form>
                 </div>
