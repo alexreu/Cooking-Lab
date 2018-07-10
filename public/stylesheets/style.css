@@ -6,9 +6,14 @@ body {
   width: 100%;
   background: rgba(0,0,0,0.5);
 }
-/* orange button */
+/* orange  */
 .orange {
   color: #f3671f;
+}
+ 
+/* Pink Title */
+.pimky {
+  color: #d05c62;
 }
  
 /* pink button */
@@ -57,6 +62,11 @@ body {
 
 
 
+
+
 .inactive-card {
   filter: grayscale(100%);
+}
+.scroll_desc{
+  overflow-y: scroll;
 }
