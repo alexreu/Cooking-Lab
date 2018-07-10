@@ -74,7 +74,6 @@ ateliersController.edit = function(req, res){
 			}
 		});
 	}
-	console.log(req.body.img);
 	// recuperation des tous les champs du formulaire à editer
 	var id = req.body.idAtelier;
 	var titre = req.body.titre;
@@ -90,14 +89,14 @@ ateliersController.edit = function(req, res){
 	}else {
 		var img = req.body.currentImg;
 	}
-
+    console.log(time);
 	ateliers.findByIdAndUpdate(id, {
 		$set: {
 			titre: titre,
 			description: description,
 			nb_place_disp: nb_place_disp,
 			duree: duree,
-			time: time,
+			heure_debut: time,
 			date: date,
 			prix: prix,
 			img: img,

@@ -16,9 +16,7 @@ atelierAffecterController.lister= function (req, res){
     populate('id_atelier').
     populate('id_cuisinier').
     exec(function(err, ateliers){
-        console.log(ateliers[1].id_cuisinier[0]._id);
-        console.log(req.session.userId);
-        console.log(req.session.userId == ateliers[1].id_cuisinier[0]._id);
+        console.log(ateliers[4].id_atelier[0]);
 		if (err){
 			console.log('Error: ', err);
 		}else{

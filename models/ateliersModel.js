@@ -7,7 +7,7 @@ var ateliersSchema = new mongoose.Schema ({
     description : String,
     date : String,
     duree : String,
-    heure_debut: Number,
+    heure_debut: String,
     nb_place_disp : Number,
     nb_place_res : {
         type : Number,
