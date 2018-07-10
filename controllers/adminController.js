@@ -15,9 +15,15 @@ adminController.login = function(req, res){
 
 // rendu sur l'index admin
 adminController.index = function(req, res){
+    var date = new  Date();
+    var dd = date.getDate();
+    var mm = date.getMonth();
+    var yy = date.getFullYear();
+    var dateFormat = dd + "-" + mm + "-" + yy
     res.render('../views/admin/index', {
         adminId: req.session.adminId,
-        adminMail: req.session.adminMail
+        adminMail: req.session.adminMail,
+        date: dateFormat
     })
 };
 
