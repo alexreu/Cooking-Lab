@@ -1,7 +1,11 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif; 
 }
-
+#overlay{
+  height: 100vh;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+}
 /* orange button */
 .orange {
   color: #f3671f;
@@ -14,13 +18,43 @@ body {
   background-color : #d05c62 ;
   color:white;
 }
+.dark {
+  color: #401c1e;
+}
+  
 
 /* part one */
 .partone {
   height:100vh;
-  background:url("../img/uploads/meringue.jpg"), no-repeat, top;
+  background: url("../img/photo1.png") no-repeat fixed top;
+  background-size:cover;
 
 }
+
+.footer {
+  background-image: linear-gradient(to bottom, #f3671f, #ee6137, #e75d48, #dd5c56, #d05c62);
+
+}
+.marque {
+  font-size: 30px;
+}
+.mail {
+  text-decoration: none;
+
+}
+
+/* unvisited link */
+.mail:link {
+  color: #401c1e;
+}
+
+/* mouse over link */
+.mail:hover {
+  color: fuchsia;
+}
+
+
+
 
 
 .inactive-card {

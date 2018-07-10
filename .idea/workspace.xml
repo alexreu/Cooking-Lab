@@ -2,20 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f06f82-92d3-41ae-b2e0-da5dc7a7e412" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/adminController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/adminModel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/admin/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/addAdmin.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/index.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/admin/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/utilisateurs.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/utilisateurs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/atelier/reservAtelier.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/atelier/reservAtelier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/photo9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pixel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pixelb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pixelo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/pixelr.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index/ateliersPublics.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index/ateliersPublics.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,24 +39,6 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ateliersControllers.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/controllers/ateliersControllers.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret line="44" column="15" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ateliersModel.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/models/ateliersModel.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="392">
-                  <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
@@ -70,11 +57,29 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="login.ejs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="login.ejs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/views/admin/login.ejs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+                <state relative-caret-position="672">
+                  <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/views/index.ejs">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="280">
+                  <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="252">
+                  <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
                 </state>
               </provider>
             </entry>
@@ -83,7 +88,7 @@
             <entry file="file://$PROJECT_DIR$/views/admin/addAdmin.ejs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="28">
-                  <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+                  <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
                 </state>
               </provider>
             </entry>
@@ -92,7 +97,7 @@
             <entry file="file://$PROJECT_DIR$/controllers/utilisateursController.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-840">
-                  <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+                  <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -161,14 +166,12 @@
         <option value="$PROJECT_DIR$/models/rolesModel.js" />
         <option value="$PROJECT_DIR$/controllers/uploadFile.js" />
         <option value="$PROJECT_DIR$/public/js/atelier/editAtelier.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/routes/ateliersRoute.js" />
         <option value="$PROJECT_DIR$/controllers/utilisateursController.js" />
         <option value="$PROJECT_DIR$/models/ateliersCreer.js" />
         <option value="$PROJECT_DIR$/models/ateliersAffecter.js" />
         <option value="$PROJECT_DIR$/routes/reservations/reservationsRoute.js" />
         <option value="$PROJECT_DIR$/controllers/reservationsController.js" />
-        <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/routes/index/ateliersPublicsRoute.js" />
         <option value="$PROJECT_DIR$/models/ateliersModel.js" />
         <option value="$PROJECT_DIR$/controllers/ateliersPublicsController.js" />
@@ -179,7 +182,6 @@
         <option value="$PROJECT_DIR$/controllers/controllerAffecter.js" />
         <option value="$PROJECT_DIR$/public/js/atelier/reservAtelier.js" />
         <option value="$PROJECT_DIR$/views/index/ateliersPublics.ejs" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/models/utilisateurs.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/models/adminModel.js" />
@@ -188,6 +190,9 @@
         <option value="$PROJECT_DIR$/views/admin/index.ejs" />
         <option value="$PROJECT_DIR$/routes/admin/admin.js" />
         <option value="$PROJECT_DIR$/controllers/adminController.js" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
       </list>
     </option>
   </component>
@@ -269,6 +274,12 @@
             <path>
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -340,12 +351,12 @@
       <workItem from="1531114215130" duration="965000" />
       <workItem from="1531115962944" duration="8698000" />
       <workItem from="1531195935567" duration="4037000" />
-      <workItem from="1531200026170" duration="3520000" />
+      <workItem from="1531200026170" duration="3814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75813000" />
+    <option name="totallyTimeSpent" value="76107000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="-1088" width="1936" height="1056" extended-state="6" />
@@ -470,13 +481,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/ateliersRoute.js" />
     <entry file="file://$PROJECT_DIR$/controllers/rolesController.js">
       <provider selected="true" editor-type-id="text-editor" />
@@ -568,20 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="28" column="60" lean-forward="true" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ateliers/addAteliers.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
@@ -634,14 +624,14 @@
     <entry file="file://$PROJECT_DIR$/controllers/utilisateursController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-840">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/addAdmin.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
-          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+          <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -654,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/adminModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="336">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -666,17 +656,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/admin/login.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+        <state relative-caret-position="672">
+          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
-          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
         </state>
       </provider>
     </entry>
