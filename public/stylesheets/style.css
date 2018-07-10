@@ -18,7 +18,8 @@ body {
 /* part one */
 .partone {
   height:100vh;
-  background:url("../img/uploads/meringue.jpg"), no-repeat, top;
+  background:url("../img/photo1.png") no-repeat top;
+  background-size:cover;
 
 }
 
