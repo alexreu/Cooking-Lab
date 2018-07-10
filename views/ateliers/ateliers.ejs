@@ -1,40 +1,39 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+    <% include ../partials/head %>
 </head>
 <body>
-<a href="/" class="btn btn-primary">retour accueil</a>
-<a href="/ateliersRoute/creer" class="btn btn-primary">Ajouter un atelier</a>
+<header>
+    <%include ../partials/header %>
+</header>
+<div class="d-flex justify-content-end align-items-center py">
+        <i class="fas fa-plus-circle pimky fa-2x mr-2"> </i><a href="/ateliersRoute/creer" class="addB mr-5">Ajouter un atelier</a>
+</div>
 <section class="container">
-    <h1 class="text-center">Atelier actif</h1>
-    <div class="row">
+    <h1 class="text-center pt-4 orange">Ateliers actifs</h1>
+    
+    <div class="container d-flex justify-content-around flex-wrap py-5 px-5">
         <% data.forEach(function(element){%>
-        <% if(userId == element.id_cuisinier[0]._id) { %>
+        <% if(id == element.id_cuisinier[0]._id) { %>
             <% element.id_atelier.forEach(function(element) { %>
                 <% if(element.statut) { %>
-                <div class="col-md-3 text-center mx-auto">
-                    <div class="card" style="width: 18rem; ">
+                <div class="text-center  mb-5">
+                    <div class="card shadow p-1 mb-2 bg-white rounded " style="width: 18rem; ">
                         <!-- gérer la gestion des images ajout d'une pièce jointe -->
                         <img class="card-img-top" src="img/uploads/<%=element.img%> " alt="Card image cap">
                         <div class="card-body">
-                        <p class="card-text"><%=element.date%></p>
-                        <p class="card-text"><%=element.heure_debut%></p>
-                        <p class="card-text"><%=element.prix%>€ / personne</p>
-
-                        <h5 class="card-title"><%=element.titre%></h5>
-                        <div class="scroll_desc" style="height:100px">
-                            <p class="card-text "> Description : <%=element.description%></p>
-                        </div>
-                        <p class="card-text">Nombre de places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
-                        <p class="card-text">Durée :<%=element.duree%> H</p>
+                                <p class="card-text dark"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
+                                <p class="card-text dark"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
+                                <p class="card-text dark"><i class="fas fa-euro-sign orange"></i> <%=element.prix%>€ / personne</p>
+            
+                                <h5 class="card-title pimky font-weight-bold"><%=element.titre%></h5>
+                                <div class="mb-3" style="height:auto">
+                                    <p class="card-text dark"> Description : <%=element.description%></p>
+                                </div>
+                                <p class="card-text dark"><i class="fas fa-users orange"></i> Places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
+                                <p class="card-text dark"><i class="fas fa-hourglass-half orange"></i> Durée :<%=element.duree%> H</p>
+                                
 
                             <a href="#editAtelier" data-toggle="modal" class="btn btn-primary" data-titre="<%=element.titre%>" data-description="<%=element.description%>" data-placesD="<%=element.nb_place_disp%>" data-palcesR="<%=element.nb_place_res%>" data-duree="<%=element.duree%>" data-date="<%=element.date%>" data-prix="<%=element.prix%>" data-id="<%=element._id%>" data-img="<%=element.img%>" data-time="<%=element.heure_debut%>">
                                 Editer l'atelier
@@ -51,27 +50,27 @@
 </section>
 <hr class="my-5">
 <section class="container">
-    <h1 class="text-center">Atelier inactif</h1>
-    <div class="row">
+    <h1 class="text-center orange">Ateliers inactifs</h1>
+    <div class="container d-flex justify-content-around flex-wrap py-5 px-5">
         <% data.forEach(function(element){%>
-            <% if(userId == element.id_cuisinier[0]._id) { %>
+            <% if(id == element.id_cuisinier[0]._id) { %>
                 <% element.id_atelier.forEach(function(element) { %>
                     <% if(!element.statut) { %>
-                    <div class="col-md-3 text-center mx-auto border-success">
-                        <div class="card inactive-card" style="width: 18rem; height:400px">
+                    <div class="text-center  mb-5">
+                        <div class="card inactive-card" style="width: 18rem">
                             <!-- gérer la gestion des images ajout d'une pièce jointe -->
                             <img class="card-img-top" src="img/uploads/<%=element.img%> " alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text"><%=element.date%></p>
-                                <p class="card-text"><%=element.heure_debut%></p>
-                                <p class="card-text"><%=element.prix%>€ / personne</p>
-
-                                <h5 class="card-title"><%=element.titre%></h5>
-                                <div class="" style="height:100px">
-                                    <p class="card-text"> Description : <%=element.description%></p>
-                                </div>
-                                <p class="card-text">Nombre de places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
-                                <p class="card-text">Durée :<%=element.duree%> H</p>
+                                    <p class="card-text"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
+                                    <p class="card-text"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
+                                    <p class="card-text"><i class="fas fa-euro-sign orange"></i> <%=element.prix%>€ / personne</p>
+                
+                                    <h5 class="card-title pimky font-weight-bold"><%=element.titre%></h5>
+                                    <div class="mb-3" style="height:auto">
+                                        <p class="card-text "> Description : <%=element.description%></p>
+                                    </div>
+                                    <p class="card-text"><i class="fas fa-users orange"></i> Places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
+                                    <p class="card-text"><i class="fas fa-hourglass-half orange"></i> Durée :<%=element.duree%> H</p>
 
                                 <a href="#editAtelier" data-toggle="modal" class="btn btn-primary" data-titre="<%=element.titre%>" data-description="<%=element.description%>" data-placesD="<%=element.nb_place_disp%>" data-palcesR="<%=element.nb_place_res%>" data-duree="<%=element.duree%>" data-date="<%=element.date%>" data-prix="<%=element.prix%>" data-id="<%=element._id%>" data-img="<%=element.img%>">
                                     Editer l'atelier
@@ -149,6 +148,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="./js/atelier/editAtelier.js"></script>
+<footer>
+        <%include ../partials/footer%>
+</footer>
 </body>
 </html>
 

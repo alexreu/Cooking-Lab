@@ -10,7 +10,11 @@ var ateliersController = {};
 
 // fonction permettant de faire un rendu sur la vue addAteliers.ejs
 ateliersController.creer = function(req, res){
-	res.render('../views/ateliers/addAteliers');
+	res.render('../views/ateliers/addAteliers', {
+		id: req.session.userId,
+		role: req.session.userRole,
+		username: req.session.userName,
+	});
 };
 
 // fonction permettant sauvegarder les ateliers en bdd

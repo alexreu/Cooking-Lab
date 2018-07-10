@@ -15,6 +15,13 @@ body {
 .pimky {
   color: #d05c62;
 }
+
+.addB {
+  border : 3px solid #d05c62;
+  border-radius : 6px ;
+  color: #d05c62;
+  padding : 10px;
+}
  
 /* pink button */
 .pink {
@@ -64,4 +71,8 @@ body {
 }
 .scroll_desc{
   overflow-y: scroll;
+}
+
+a:hover {
+  color: #401c1e;
 }

@@ -22,7 +22,9 @@ atelierAffecterController.lister= function (req, res){
 		}else{
 			res.render("../views/ateliers/ateliers", {
 				data: ateliers,
-                userId: req.session.userId,
+				id: req.session.userId,
+				role: req.session.userRole,
+				username: req.session.userName,
 			})
 		}
 	});

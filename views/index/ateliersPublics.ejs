@@ -14,24 +14,25 @@
     <h1 class="text-center orange pt-5">Nos ateliers du moment</h1>
 
     <p class="text-center dark py-5">Plutôt viande ou plutôt légumes ? Envie de maîtriser la cuisson d'un moelleux au chocolat ou la préparation de délicieux smoothies ? Découvrez dès à présent nos ateliers disponibles.</p>
+    
     <div class="container d-flex justify-content-around flex-wrap populaire py-5 px-5 rounded">
         <% data.forEach(function(element){%>
         <% if(element.statut) { %>
         <div class=" text-center  mb-5">
             <div class="card shadow p-1 mb-2 bg-white rounded " style="width: 18rem;">
                 <!-- gérer la gestion des images ajout d'une pièce jointe -->
-                <img class="card-img-top img-fluid" src="img/uploads/<%=element.img%> " alt="Card image cap">
+                <img class="card-img-top" src="img/uploads/<%=element.img%> " alt="Card image cap">
                 <div class="card-body">
-                    <p class="card-text"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
-                    <p class="card-text"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
-                    <p class="card-text"><i class="fas fa-euro-sign orange"></i> <%=element.prix%>€ / personne</p>
+                    <p class="card-text dark"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
+                    <p class="card-text dark"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
+                    <p class="card-text dark"><i class="fas fa-euro-sign orange"></i> <%=element.prix%>€ / personne</p>
 
                     <h5 class="card-title pimky font-weight-bold"><%=element.titre%></h5>
                     <div class="mb-3" style="height:auto">
-                        <p class="card-text "> Description : <%=element.description%></p>
+                        <p class="card-text dark"> Description : <%=element.description%></p>
                     </div>
-                    <p class="card-text"><i class="fas fa-users orange"></i> Places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
-                    <p class="card-text"><i class="fas fa-hourglass-half orange"></i> Durée :<%=element.duree%> H</p>
+                    <p class="card-text dark"><i class="fas fa-users orange"></i> Places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
+                    <p class="card-text dark"><i class="fas fa-hourglass-half orange"></i> Durée :<%=element.duree%> H</p>
                     
                     <form id="<%= element._id %>" action=/reservationsRoute/save method="post">
                         <input type="hidden" value="<%= element._id %>" name="id_atelier">
