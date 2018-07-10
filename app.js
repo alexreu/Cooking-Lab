@@ -28,7 +28,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 //utilisation des sessions
 app.use(session({
-    secret: 'Work Hard',
+    // personnalisation du secret
+    secret: 'My secret bomboklat wonbo combo',
     resave: true,
     saveUninitialized: false,
     store: new MongoStore({
@@ -59,6 +60,8 @@ app.use('/ateliersRoute', ateliers);
 var utilisateurs = require('./routes/utilisateurs/utilisateurs');
 app.use('/utilisateurs',utilisateurs);
 
+var admin = require('./routes/admin/admin');
+app.use('/admin', admin);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

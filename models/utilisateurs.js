@@ -4,7 +4,10 @@ var mongoose = require('mongoose');
 var utilisateursSchema = new mongoose.Schema({
     nom : String,
     prenom : String,
-    email: String, 
+    email: {
+        type: String,
+        unique: true
+    },
     telephone : String,
 	password: String,
 	passwordConf: String,
