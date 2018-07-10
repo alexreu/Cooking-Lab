@@ -16,7 +16,10 @@ ateliersPublicsController.lister= function (req, res){
 			console.log('Error: ', err);
 		}else{
             res.render("../views/index/ateliersPublics", {
-                data: ateliers
+				data: ateliers,
+				id: req.session.userId,
+				role: req.session.userRole,
+				username: req.session.userName,
             })
         }
 	});
