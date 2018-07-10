@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
 var admins = require('../models/adminModel');
+var users = require('../models/utilisateurs');
 var bcrypt = require('bcrypt');
+var user = require('../models/utilisateurs');
 
 
 var adminController = {};
@@ -21,6 +23,19 @@ adminController.index = function(req, res){
         adminId: req.session.adminId,
         adminMail: req.session.adminMail
     })
+};
+
+// fonction listing des utilisateurs
+adminController.listUser = function(req, res){
+  user.find({}).exec(function (err, user) {
+      if(!err){
+          res.render('../views/admin/userList', {
+              user: user,
+              adminId: req.session.adminId,
+              adminMail: req.session.adminMail
+          })
+      }
+  })
 };
 
 // fonction qui hash le mot de passe et qui le met en bdd
@@ -57,7 +72,6 @@ adminController.add = function (req, res) {
 adminController.auth = function(req, res){
     var email = req.body.mail;
     var password = req.body.password;
-    console.log()
     admins.findOne({mail: email}).exec(function (err, admin) {
         console.log(err, admin);
         if(!err && admin){
@@ -65,17 +79,53 @@ adminController.auth = function(req, res){
                 if(result){
                     req.session.adminId = admin._id;
                     req.session.adminMail = admin.mail;
-                    res.redirect('/admin');
+                    res.redirect('/admin/index/');
                 }else {
                     console.log("err =>", err);
-                    res.redirect('/admin/login')
+                    res.redirect('/admin')
                 }
             })
         }else {
             console.log("err =>", err);
-            res.redirect('/admin/login');
+            res.redirect('/admin');
         }
     })
 };
 
+//fonction edition utilisateur
+adminController.edit = function(req, res){
+    var id = req.body.id;
+    var nom = req.body.nom;
+    var prenom = req.body.prenom;
+    var telephone = req.body.telephone;
+    var role = req.body.role;
+    users.findByIdAndUpdate(id, {
+        $set: {
+            nom: nom,
+            prenom: prenom,
+            telephone: telephone,
+            role: role,
+        }
+    }, function (err, result) {
+        console.log(result);
+        if(!err){
+            res.redirect('/admin/user');
+        }else{
+            res.redirect('/admin/user');
+        }
+    })
+};
+// fonction deconnexion
+adminController.logout = function(req,res){
+    if(req.session){
+        req.session.destroy(function (err) {
+            if(!err){
+                res.redirect('/admin')
+            }else{
+                console.log('err =>', err);
+                res.status(200).send('error');
+            }
+        })
+    }
+};
 module.exports = adminController;

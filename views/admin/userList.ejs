@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List utilisateur</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+</head>
+<body>
+<% include partials/header.ejs%>
+<div>
+
+
+
+</div>
+<table class="table table-hover">
+    <thead>
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Email</th>
+        <th scope="col">Telephone</th>
+        <th scope="col">Role</th>
+        <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% user.forEach(function (element) { %>
+    <tr>
+        <td><%= element.nom %></td>
+        <td><%= element.prenom %></td>
+        <td><%= element.email %></td>
+        <td><%= element.telephone %></td>
+        <td><%= element.role %></td>
+        <td><a href="#editUser" data-toggle="modal" class="btn btn-primary" data-id="<%= element._id %>" data-nom="<%= element.nom %>" data-prenom="<%= element.prenom %>" data-telephone="<%= element.telephone %>" data-role="<%= element.role %>">Editer</a></td>
+    </tr>
+    <% }) %>
+    </tbody>
+</table>
+    <!-- Modal -->
+    <div class="modal fade" id="editUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Edition utilisateur</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/admin/edit" method="post">
+                        <input type="hidden" id="id" name="id">
+                        <label for="username">Nom de l'utilisateur</label>
+                        <input type="text" class="form-control" name="nom" id="nom" required>
+                        <label for="username">Prenom de l'utilisateur</label>
+                        <input type="text" class="form-control" name="prenom" id="prenom" required>
+                        <label for="username">Telephone de l'utilisateur</label>
+                        <input type="text" class="form-control" name="telephone" id="telephone" required>
+                        <label for="username">Role de l'utilisateur</label>
+                        <select name="role" id="role" class="form-control">
+                            <option value="utilisateur">utilisateur</option>
+                            <option value="cuisinier">cuisinier</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary mt-3">Mettre à jour</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="../js/admin/adminUpdateUser.js" ></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <a class="navbar-brand text-uppercase" href="#">Administration</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav w-100 align-items-center">
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="/admin/index">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-uppercase" href="/admin/user">utilisateur</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-uppercase" href="#">ateliers</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link text-uppercase" href="#">ajout admin</a>
+            </li>
+            <li class="nav-item ml-auto">
+                <p class="nav-link p-0 active text-uppercase" href="#">Bienvenue <%= adminMail %></p>
+                <a href="/admin/logout text-uppercase" class="nav-link p-0">Deconnexion</a>
+            </li>
+        </ul>
+    </div>
+</nav>
