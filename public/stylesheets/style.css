@@ -31,7 +31,7 @@ body {
 
 }
 
-.footer {
+.footer, .populaire {
   background-image: linear-gradient(to bottom, #f3671f, #ee6137, #e75d48, #dd5c56, #d05c62);
 
 }

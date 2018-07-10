@@ -1,32 +1,34 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+    <% include ../partials/head %>
+
 </head>
+
 <body>
-<a href="/" class="btn btn-primary">retour accueil</a>
+<header>
+    <%include ../partials/header %>
+</header>
 <section class="container">
-    <h1 class="text-center">Ateliers</h1>
-    <div class="row">
+    <h1 class="text-center orange pt-5">Nos ateliers du moment</h1>
+
+    <p class="text-center dark py-5">Plutôt viande ou plutôt légumes ? Envie de maîtriser la cuisson d'un moelleux au chocolat ou la préparation de délicieux smoothies ? Découvrez dès à présent nos ateliers disponibles.</p>
+    <div class="row d-flex justify-content-between ">
         <% data.forEach(function(element){%>
         <% if(element.statut) { %>
-        <div class="col-md-3 text-center mx-auto">
+        <div class="col-md-3 text-center mx-4 mb-5">
             <div class="card" style="width: 18rem;">
                 <!-- gérer la gestion des images ajout d'une pièce jointe -->
                 <img class="card-img-top" src="img/uploads/<%=element.img%> " alt="Card image cap">
                 <div class="card-body">
+                    <p class="card-text"><%=element.date%></p>
+                    <p class="card-text"><%=element.heure_debut%></p>
+
                     <h5 class="card-title"><%=element.titre%></h5>
                     <p class="card-text"> Description : <%=element.description%></p>
                     <p class="card-text">Nombre de places  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
-                    <p class="card-text"><%=element.duree%> Jours</p>
-                    <p class="card-text"><%=element.date%></p>
+                    <p class="card-text"><%=element.duree%> H</p>
                     <p class="card-text"><%=element.prix%>€ / personne</p>
                     <form id="<%= element._id %>" action=/reservationsRoute/save method="post">
                         <input type="hidden" value="<%= element._id %>" name="id_atelier" id="id_atelier">
@@ -52,5 +54,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="./js/atelier/editAtelier.js"></script>
 <script src="../js/atelier/reservAtelier.js"></script>
+
+<%include ../partials/footer%>
 </body>
 </html>
