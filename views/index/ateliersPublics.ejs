@@ -35,11 +35,11 @@
                     <p class="card-text"><i class="fas fa-hourglass-half orange"></i> Durée :<%=element.duree%> H</p>
                     
                     <form id="<%= element._id %>" action=/reservationsRoute/save method="post">
-                        <input type="hidden" value="<%= element._id %>" name="id_atelier" id="id_atelier">
+                        <input type="hidden" value="<%= element._id %>" name="id_atelier">
                         <% if(element.nb_place_res === element.nb_place_disp) { %>
-                        <button type="submit" class="pink disabled reservButton" id="" data-id="<%= element._id %>"  disabled >S'inscrire </button>
+                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>"  disabled >Complet</button>
                         <% } else{ %>
-                        <button type="submit" class="reservButton pink" data-id="<%= element._id %>" id="">S'inscrire </button>
+                        <button type="submit" class="reservButton pink" data-id="<%= element._id %>">S'inscrire</button>
                         <% } %>
                     </form>
                 </div>
@@ -49,7 +49,84 @@
         <% }) %>
     </div>
 </section>
-<!--fin modal edition atelier-->
+
+<!-- debut modal inscription utilisateur -->
+<div class="modal fade" id="inscription-utilisateur" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Inscription</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="utilisateurs/save" method="post">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Numéro de mobile</label>
+                        <input type="number"  class="form-control" id="mobile" name="telephone">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mot de passe</label>
+                        <input type="password"  class="form-control" id="password" name="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Confirmer votre mot de passe</label>
+                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Inscription</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--fin modal inscription utilisateur-->
+
+<!-- debut modal connexion utilisateur -->
+<div class="modal fade" id="connexion-utilisateur" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Connexion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="utilisateurs/login" method="post">
+                    <div class="form-group">
+                        <label for="nom">Adresse Mail</label>
+                        <input type="text" class="form-control" id="emailLogin" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Mot de passe</label>
+                        <input type="password" class="form-control" id="passwordLogin" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Connexion</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--fin modal connexion utilisateur-->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
