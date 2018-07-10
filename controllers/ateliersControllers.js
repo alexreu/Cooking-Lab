@@ -32,6 +32,7 @@ ateliersController.save = function(req, res){
 		nb_place_disp : req.body.nb_place_disp,
 		nb_place_res : req.body.nb_place_res,
 		duree : req.body.duree,
+		time:req.body.time,
 		date : req.body.date,
 		prix : req.body.prix,
 		img : req.files.img.name,
@@ -79,6 +80,7 @@ ateliersController.edit = function(req, res){
 	var titre = req.body.titre;
 	var description = req.body.description;
 	var nb_place_disp = req.body.nb_place_disp;
+	var time = req.body.time;
 	var duree = req.body.duree;
 	var date = req.body.date;
 	var prix = req.body.prix;
@@ -95,6 +97,7 @@ ateliersController.edit = function(req, res){
 			description: description,
 			nb_place_disp: nb_place_disp,
 			duree: duree,
+			time: time,
 			date: date,
 			prix: prix,
 			img: img,
