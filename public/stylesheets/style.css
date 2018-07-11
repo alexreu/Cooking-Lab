@@ -16,6 +16,9 @@ body {
   color: #d05c62;
 }
 
+h1,h2,h5 {
+  font-family : "Roboto" ;
+}
 .addB {
   border : 3px solid #d05c62;
   border-radius : 6px ;
