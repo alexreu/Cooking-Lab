@@ -11,25 +11,25 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav w-100 justify-content-around align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link display-4 orange" href="/" aria-label="retour à l'accueil">Cooking'Lab</a>
+                    <a class="nav-link display-4 orange font-weight-bold" href="/" aria-label="retour à l'accueil">Cooking'Lab</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link orange" href="/" aria-label="retour à l'accueil">Accueil</a>
+                    <a class="nav-link orange font-weight-bold" href="/" aria-label="retour à l'accueil">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link orange" href="/ateliersPublicsRoute" aria-label="aller à la page des ateliers">Nos ateliers de cuisine</a>
+                    <a class="nav-link orange font-weight-bold" href="/ateliersPublicsRoute" aria-label="aller à la page des ateliers">Nos ateliers de cuisine</a>
                 </li>
                 <% if(id && role === 'cuisinier') { %>
                 <li class="nav-item">
-                    <a class="nav-link orange" href="/ateliersRoute" aria-label="aller à la page de gestion des ateliers">Je suis cuisinier</a>
+                    <a class="nav-link orange font-weight-bold" href="/ateliersRoute" aria-label="aller à la page de gestion des ateliers">Je suis cuisinier</a>
                 </li>
                 <% } %>
                 <% if(!id && !username) { %>
                 <li class="nav-item">
-                    <a href="#inscription-utilisateur" data-toggle="modal" class="nav-item orange" aria-label="aller sur la page d'inscription">Inscription</a>
+                    <a href="#inscription-utilisateur" data-toggle="modal" class="nav-item orange font-weight-bold" aria-label="aller sur la page d'inscription">Inscription</a>
                 </li>
                 <li class="nav-item ml-2">
-                    <a href="#connexion-utilisateur" data-toggle="modal" class="nav-item orange" aria-label="aller à la page d'authentification">Connexion</a>
+                    <a href="#connexion-utilisateur" data-toggle="modal" class="nav-item orange font-weight-bold" aria-label="aller à la page d'authentification">Connexion</a>
                 </li>
                 <% } %>
                 <% if(id && username) { %>
@@ -37,7 +37,7 @@
                     <p class="font-weight-bold pimky m-0">Bonjour <%= username %> !</p>
                 </li>
                 <li class="nav-item">
-                    <a href="/logout" class="nav-link pink" aria-label="se déconnecter de la session">Deconnexion</a>
+                    <a href="/logout" class="nav-link pink font-weight-bold" aria-label="se déconnecter de la session">Deconnexion</a>
                 </li>
                 <% } %>
             </ul>
