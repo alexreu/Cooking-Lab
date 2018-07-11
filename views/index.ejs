@@ -12,8 +12,8 @@
 
 <section class="container-fluid text-center partone d-flex align-items-center">
     <div id="overlay"  class="d-flex align-items-center">
-        <div class="jumbotron bg-transparent ">
-            <h1 class="display-5 text-white">Healthy and Good ! Apprenez ou ré-apprenez les bases de la cuisine saine et savoureuse.</h1>
+        <div class="jumbotron bg-transparent  ">
+            <h1 class="display-5 text-white ">Healthy and Good ! Apprenez ou ré-apprenez les bases de la cuisine saine et savoureuse.</h1>
         </div>
     </div>
 </section>
@@ -100,11 +100,11 @@
                 <form action="utilisateurs/save" method="post">
                     <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{1,}" id="nom" name="nom" required>
                     </div>
                     <div class="form-group">
                         <label for="prenom">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{1,}" id="prenom" name="prenom" required>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
@@ -112,15 +112,15 @@
                     </div>
                     <div class="form-group">
                         <label for="mobile">Numéro de mobile</label>
-                        <input type="number"  class="form-control" id="mobile" name="telephone">
+                        <input type="tel"  class="form-control" id="mobile" pattern="[0-9]{10}" minlength="10" maxlength="10"  name="telephone">
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mot de passe</label>
-                        <input type="password"  class="form-control" id="password" name="password">
+                        <input type="password"  class="form-control" id="password" name="password" required> 
                     </div>
                     <div class="form-group">
                         <label for="mobile">Confirmer votre mot de passe</label>
-                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf">
+                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Inscription</button>
                 </form>
