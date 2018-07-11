@@ -10,6 +10,7 @@ utilisateursController.home = function(req, res){
         username: req.session.userName,
 	    id: req.session.userId,
 		role: req.session.userRole,
+		message : "Cooking'Lab - Accueil",
     })
 };
 

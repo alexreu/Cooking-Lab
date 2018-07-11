@@ -18,7 +18,8 @@ ateliersPublicsController.lister= function (req, res){
                 data: ateliers,
                 id: req.session.userId,
                 role: req.session.userRole,
-                username: req.session.userName,
+				username: req.session.userName,
+				message : "Cooking'Lab - Nos Ateliers",
             })
         }else{
             console.log('Error: ', err);

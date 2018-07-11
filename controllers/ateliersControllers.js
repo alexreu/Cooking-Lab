@@ -14,6 +14,7 @@ ateliersController.creer = function(req, res){
 		id: req.session.userId,
 		role: req.session.userRole,
 		username: req.session.userName,
+		
 	});
 };
 
