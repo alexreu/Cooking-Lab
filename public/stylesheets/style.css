@@ -106,3 +106,7 @@ a:hover {
 .logo-footer:hover{
   transform: scale(1.2);
 }
+.first-letter{
+  font-size: 25px;
+  color : #d05c62 ;
+}
