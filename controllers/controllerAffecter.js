@@ -15,6 +15,7 @@ atelierAffecterController.lister= function (req, res){
                 id: req.session.userId,
                 role: req.session.userRole,
                 username: req.session.userName,
+                message : "Cooking'Lab - Gestion des Ateliers",
             })
 		}else{
             console.log('Error: ', err);
