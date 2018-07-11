@@ -39,9 +39,12 @@
                     <form id="<%= element._id %>" action=/reservationsRoute/save method="post">
                         <input type="hidden" value="<%= element._id %>" name="id_atelier">
                         <% if(element.nb_place_res === element.nb_place_disp) { %>
-                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>"  disabled >Complet</button>
-                        <% } else{ %>
-                        <button type="submit" class="reservButton pink py-2 px-3" data-id="<%= element._id %>">S'inscrire</button>
+                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>" disabled>Complet</button>
+                        <% } else if(id) { %>
+                        <button type="submit" class="reservButton pink py-2 px-3" data-id="<%= element._id %>">S'inscrire à l'atelier</button>
+                        <% } %>
+                        <% if(!id){ %>
+                        <a href="#inscription-utilisateur" data-toggle="modal" class="reservButton pink py-2 px-3" data-id="<%= element._id %>">S'inscrire</a>
                         <% } %>
                     </form>
                 </div>

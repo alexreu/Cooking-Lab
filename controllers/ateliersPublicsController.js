@@ -2,6 +2,7 @@
 var mongoose = require ('mongoose');
 var ateliers = require('../models/ateliersModel');
 var ateliersPrivate = require('../controllers/ateliersControllers');
+var ateliersReserv = require('../models/reservationsModel');
 
 
 // controller ateliersP
