@@ -1,5 +1,5 @@
 $(function(){
-    console.log(window.location.pathname);
+
     var path = window.location.pathname;
     if(path == "/admin/index"){
         $('#accueil').addClass("active");
@@ -14,7 +14,7 @@ $(function(){
     $('.delAffect').on('click', function () {
         var id = $(this).data('id');
         console.log(id);
-        $.post("http://localhost:3012/admin/delAffect",
+        $.post("/admin/delAffect",
             {
                 id: id
             }, function (result) {

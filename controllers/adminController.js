@@ -37,15 +37,15 @@ adminController.createAdmin = function(req, res){
 };
 // fonction listing des utilisateurs
 adminController.listUser = function(req, res){
-  user.find({}).exec(function (err, user) {
-      if(!err){
-          res.render('../views/admin/userList', {
-              user: user,
-              adminId: req.session.adminId,
-              adminMail: req.session.adminMail
-          })
-      }
-  })
+    user.find({}).exec(function (err, user) {
+        if(!err){
+            res.render('../views/admin/userList', {
+                user: user,
+                adminId: req.session.adminId,
+                adminMail: req.session.adminMail
+            })
+        }
+    })
 };
 
 // fonction listing des ateliers
@@ -80,8 +80,7 @@ admins.schema.pre('save', function (next) {
 adminController.add = function (req, res) {
     var admin = new admins(req.body);
     if(req.body.password === req.body.passwordConf) {
-        admin.save(function (err, result) {
-            console.log(result);
+        admin.save(function (err) {
             if (!err) {
                 res.redirect('/admin/index');
             } else {
@@ -97,7 +96,6 @@ adminController.auth = function(req, res){
     var email = req.body.mail;
     var password = req.body.password;
     admins.findOne({mail: email}).exec(function (err, admin) {
-        console.log(err, admin);
         if(!err && admin){
             bcrypt.compare(password, admin.password, function (err, result) {
                 if(result){
@@ -123,15 +121,14 @@ adminController.edit = function(req, res){
     var prenom = req.body.prenom;
     var telephone = req.body.telephone;
     var role = req.body.role;
-    users.findByIdAndUpdate(id, {
+    user.findByIdAndUpdate(id, {
         $set: {
             nom: nom,
             prenom: prenom,
             telephone: telephone,
             role: role,
         }
-    }, function (err, result) {
-        console.log(result);
+    }, function (err) {
         if(!err){
             res.redirect('/admin/user');
         }else{
@@ -142,7 +139,7 @@ adminController.edit = function(req, res){
 
 //fonction suppression utilisateur
 adminController.delete = function(req, res){
-  var id = req.params.id;
+    var id = req.params.id;
     user.findByIdAndDelete(id, function (err, result) {
         console.log('utilisateur supprimé =>', result);
         if(!err){
@@ -155,17 +152,16 @@ adminController.delete = function(req, res){
 
 // fonction suppression d'un atelier
 adminController.deleteAtelier = function(req, res){
-  var id = req.params.id;
-  console.log("je suis id en param",id);
-	atelierNoAffect.findByIdAndDelete(id, function (err, result) {
-      console.log('atelier supprimé =>', result);
-      console.log("error =>", err);
-      if(!err){
-          res.redirect('/admin/atelier');
-      }else{
-          res.redirect('/admin/atelier');
-      }
-  })
+    var id = req.params.id;
+    console.log("je suis id en param",id);
+    atelierNoAffect.findByIdAndDelete(id, function (err, result) {
+        if(!err){
+            res.redirect('/admin/atelier');
+        }else{
+            console.log("error =>", err);
+            res.redirect('/admin/atelier');
+        }
+    })
 };
 
 //fonction suppression affectation atelier
@@ -177,7 +173,7 @@ adminController.delAffect = function(req, res){
             res.redirect('/admin/atelier')
         }else{
             console.log("error =>", err);
-	        res.redirect('/admin/atelier')
+            res.redirect('/admin/atelier')
         }
     })
 }
