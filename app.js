@@ -8,7 +8,6 @@ const fileUpload = require('express-fileupload');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var urlDatabase = process.env.MONGO_URI;
-console.log(urlDatabase);
 
 //connexion à la base de donnée
 mongoose.connect('mongodb://alexandre:alexandre974@ds127841.mlab.com:27841/cooking-lab', {useNewUrlParser: true});

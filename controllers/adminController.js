@@ -5,6 +5,7 @@ var bcrypt = require('bcrypt');
 var user = require('../models/utilisateurs');
 var atelier = require('../models/ateliersAffecter');
 var atelierNoAffect = require('../models/ateliersModel');
+const flash = require('express-flash-notification');
 
 
 var adminController = {};
@@ -21,11 +22,14 @@ adminController.index = function(req, res){
     var mm = date.getMonth();
     var yy = date.getFullYear();
     var dateFormat = dd + "/" + mm + "/" + yy;
+	console.log(req.session);
     res.render('../views/admin/index', {
         adminId: req.session.adminId,
         adminMail: req.session.adminMail,
         date: dateFormat
-    })
+    });
+	req.session.success = "";
+	console.log(req.session.success);
 };
 
 // rendu sur l'ajout d'un admin
@@ -103,6 +107,7 @@ adminController.auth = function(req, res){
                 if(result){
                     req.session.adminId = admin._id;
                     req.session.adminMail = admin.mail;
+                    //req.flash('success', 'Connexion Réussi');
                     res.redirect('/admin/index/');
                 }else {
                     console.log("err =>", err);
