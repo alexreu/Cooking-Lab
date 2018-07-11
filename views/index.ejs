@@ -1,46 +1,78 @@
 <!doctype html>
-<html lang="en">
-<head>
-    
+<html lang="fr">
     <% include ../views/partials/head %>
-
-</head>
 <body>
-<header>
     <% include ../views/partials/header %>
-</header>
 
-<section class="container-fluid text-center partone d-flex align-items-center">
-    <div id="overlay"  class="d-flex align-items-center">
-        <div class="jumbotron bg-transparent ">
-            <h1 class="display-5 text-white">Healthy and Good ! Apprenez ou ré-apprenez les bases de la cuisine saine et savoureuse.</h1>
+<section class="container-fluid text-center partone d-flex align-items-center p-0">
+    <div id="overlay" class="d-flex align-items-center justify-content-center">
+        <div class="jumbotron bg-transparent">
+            <h1 class="display-5 text-white pt-5">Healthy and Good ! Apprenez ou ré-apprenez les bases de la cuisine saine et savoureuse.</h1>
         </div>
     </div>
 </section>
-
-<section class="container text-center dark py-5">
-    <p>Marre de manger des pâtes ou d'engloutir à la va-vite des plats préparés fades, onéreux et pas vraiment nutritifs ?</p>
-    <p>Cooking'Lab, ce sont des ateliers de cuisine où l'on se sent comme à la maison! Guidés par un chef cuisinier qualifié, vous expérimentez et créez votre plat, en choisissant le niveau de difficulté et les ustensiles qui vous conviennent.  Nous privilégions les produits sains, locaux et frais! Notre leitmotiv : que ce soit délicieux pour votre palais et pour votre corps! Nous mettons également un point d'honneur à ce que vous puissiez reproduire aisément les recettes chez vous. Pour que la cuisine devienne un véritable plaisir et un moment de détente dans votre journée déjà bien remplie.</p>
-    <p>Pour participer à l'un de nos cours, rien de plus simple : il vous suffit de créer un compte, et ensuite vous inscrire à l'atelier qui vous plaît. Parcourez notre liste, il y en a pour tous les goûts! Le paiement s'effectue sur place, avant de débuter l'activité. Après chaque session, vous aurez le plaisir de déguster vos réalisations en toute convivialité.</p>
+<section class="container dark py-5">
+    <h2 class="text-center">Marre de manger des pâtes ou d'engloutir à la va-vite des plats préparés fades, onéreux et pas vraiment nutritifs ?</h2>
+    <div class="row pt-5 align-items-center">
+        <div class="col-md-6" id="img-left"></div>
+        <div class="col-md-6">
+            <p>
+                <span class="font-weight-bold first-letter">C</span>ooking'Lab, ce sont des
+                ateliers de cuisine où l'on se sent comme à la maison! Guidés par un
+                chef cuisinier qualifié, vous expérimentez et créez votre plat, en
+                choisissant le niveau de difficulté et les ustensiles qui vous
+                conviennent.
+            </p>
+            <p>
+                Nous privilégions les produits sains, locaux et
+                frais ! <br> Notre leitmotiv : que ce soit délicieux pour votre palais
+                et pour votre corps! Nous mettons également un point d'honneur à
+                ce que vous puissiez reproduire aisément les recettes chez vous.
+            </p>
+        </div>
+    </div>
+    <div class="row pt-5 align-items-center">
+        <div class="col-md-6">
+            <p>
+                <span class="font-weight-bold first-letter">P</span>our que la cuisine
+                devienne un véritable plaisir et un moment de détente dans
+                votre journée déjà bien remplie ! Pour participer à l'un de
+                nos cours, rien de plus simple : il vous suffit de créer un compte,
+                et ensuite vous inscrire à l'atelier qui vous plaît.
+            </p>
+            <p>
+                Parcourez notre
+                liste, il y en a pour tous les goûts! Le paiement s'effectue sur place,
+                avant de débuter l'activité. Après chaque session, vous aurez le plaisir
+                de déguster vos réalisations en toute convivialité.
+            </p>
+        </div>
+        <div class="col-md-6" id="img-right"></div>
+    </div>
 </section>
 
 <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselIndicators" data-slide-to="2"></li>
+        </ol>
         <div class="carousel-inner">
             <div class="carousel-item active ">
-                <img class="d-block mx-auto w-75" src="img/photo5.png" alt="First slide">
+                <img class="d-block mx-auto w-75" src="img/photo5.png" alt="Belle pièce de boeuf, accompagnée de légumes sur sa planche en bois">
                 <div class="carousel-caption d-none d-md-block bg-dark">
                     <h5 class="px-2">De délicieuses recettes équilibrées élaborées par des chefs qualifiés !</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block mx-auto w-75" src="img/photo3.png" alt="Second slide">
+                <img class="d-block mx-auto w-75" src="img/photo3.png" alt="Poêlée de légumes colorée, et ses oeufs au plat">
                 <div class="carousel-caption d-none d-md-block bg-dark">
                     <h5 class="px-2">Des ateliers variés, régulièrement renouvelés, même le weekend et en soirée!</h5>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block mx-auto w-75" src="img/photo8.png" alt="Third slide">
+                <img class="d-block mx-auto w-75" src="img/photo8.png" alt="Groupe de jeunes gens s'amusant en cours de cuisine">
                 <div class="carousel-caption d-none d-md-block bg-dark">
                     <h5 class="px-2">Des astuces et conseils pour reproduire ou revisiter nos recettes chez vous et épater vos amis !</h5>
                 </div>
@@ -49,83 +81,117 @@
 
     </div>
 </div>
-
 <section class="container-fluid populaire py-5 mt-5">
         <h2 class="text-center my-2 pb-5 text-white">Nos ateliers les plus populaires</h2>
         <div class="container align-items-center">
         <div class="card-deck justify-content-around">
-
-                <div class="card">
+                <div class="card card-hover">
                     <img class="card-img-top" src="img/photo1.png " alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Burgers faits maison, meilleurs qu'au fast-food !</h5>
+                        <h5 class="card-title">Apprenez à faire des burgers à la maison, meilleurs qu'au fast-food !</h5>
                     </div>
                 </div>
-                <div class="card" >
+                <div class="card card-hover">
                     <img class="card-img-top" src="img/photo6.png " alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Côte de boeuf, cuisson et accompagnements</h5>
+                        <h5 class="card-title">Découvrez la côte de boeuf, cuisson et accompagnements</h5>
                     </div>
                 </div>
-                <div class="card" >
+                <div class="card card-hover">
                     <img class="card-img-top" src="img/photo9.png " alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">Soupes chaudes et froides : légumes à toutes les saisons.</h5>
+                        <h5 class="card-title">Soupes chaudes et froides : comment consommer des légumes à toutes les saisons.</h5>
                     </div>
                 </div>
         </div>
         </div>
-        
+        <div class="text-center container">
+            <a href="../ateliersPublicsRoute" class="btn  btn-outline-light mt-5">Découvrez tous nos ateliers</a>
+        </div>
 </section>
-<div class="text-center container">
-
-    <a href="../ateliersPublicsRoute" class="btn pink mt-5">Voir tous nos ateliers</a>
-</div>
-
-
-
 
 <!-- debut modal inscription utilisateur -->
-<div class="modal fade" id="inscription-utilisateur" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="inscription-utilisateur" tabindex="-1" role="dialog" aria-labelledby="modalInscriptionTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Inscription</h5>
+                <h5 class="modal-title text-uppercase" id="modalInscriptionTitle">Inscription</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="utilisateurs/save" method="post">
+                <form action="utilisateurs/save" method="post" class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{1,}" id="nom" name="nom" required>
+                        <div class="invalid-feedback">
+                            Entrez un nom valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="prenom">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{1,}" id="prenom" name="prenom" required>
+                        <div class="invalid-feedback">
+                            Entrez un prénom valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            Entrez un email valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Numéro de mobile</label>
-                        <input type="number"  class="form-control" id="mobile" name="telephone">
+                        <input type="tel"  class="form-control" id="mobile" pattern="[0-9]{10}" minlength="10" maxlength="10"  name="telephone">
+                        <div class="invalid-feedback">
+                            Entrez un numéro de mobile valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mot de passe</label>
-                        <input type="password"  class="form-control" id="password" name="password">
+                        <input type="password"  class="form-control" id="password" name="password" required>
+                        <div class="invalid-feedback">
+                            Entrez un mot de passe valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Confirmer votre mot de passe</label>
-                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf">
+                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf" required>
+                        <div class="invalid-feedback">
+                            Les deux mot de passe ne sont pas identiques
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Inscription</button>
+                    <div class="row">
+                        <button type="submit" class="btn btn-orange ml-3 mr-3">Inscription</button>
+                        <button type="reset" class="btn btn-orange">Annuler la saisie</button>
+                    </div>
                 </form>
+                <script>
+		            // Example starter JavaScript for disabling form submissions if there are invalid fields
+		            (function() {
+			            'use strict';
+			            window.addEventListener('load', function() {
+				            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+				            var forms = document.getElementsByClassName('needs-validation');
+				            // Loop over them and prevent submission
+				            var validation = Array.prototype.filter.call(forms, function(form) {
+					            form.addEventListener('submit', function(event) {
+						            if (form.checkValidity() === false) {
+							            event.preventDefault();
+							            event.stopPropagation();
+						            }
+						            form.classList.add('was-validated');
+					            }, false);
+				            });
+			            }, false);
+		            })();
+                </script>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-orange-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Fermer</button>
             </div>
         </div>
     </div>
@@ -133,30 +199,59 @@
 <!--fin modal inscription utilisateur-->
 
 <!-- debut modal connexion utilisateur -->
-<div class="modal fade" id="connexion-utilisateur" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="connexion-utilisateur" tabindex="-1" role="dialog" aria-labelledby="modalConnexion" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalCenterTitle">Connexion</h5>
+                <h5 class="modal-title" id="modalConnexion">Connexion</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <form action="utilisateurs/login" method="post">
+                <form action="utilisateurs/login" method="post" class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="nom">Adresse Mail</label>
                         <input type="text" class="form-control" id="emailLogin" name="email" required>
+                        <div class="invalid-feedback">
+                            Entrez une adresse mail
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="prenom">Mot de passe</label>
                         <input type="password" class="form-control" id="passwordLogin" name="password" required>
+                        <div class="invalid-feedback">
+                            Entrez un mot de passe
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Connexion</button>
+                    <div class="row">
+                        <button type="submit" class="btn btn-orange ml-3 mr-3"><i class="fas fa-sign-in-alt"></i> Connexion</button>
+                        <button type="reset" class="btn btn-orange"><i class="fas fa-ban"></i> Annuler la saisie</button>
+                    </div>
                 </form>
+                <script>
+		            // Example starter JavaScript for disabling form submissions if there are invalid fields
+		            (function() {
+			            'use strict';
+			            window.addEventListener('load', function() {
+				            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+				            var forms = document.getElementsByClassName('needs-validation');
+				            // Loop over them and prevent submission
+				            var validation = Array.prototype.filter.call(forms, function(form) {
+					            form.addEventListener('submit', function(event) {
+						            if (form.checkValidity() === false) {
+							            event.preventDefault();
+							            event.stopPropagation();
+						            }
+						            form.classList.add('was-validated');
+					            }, false);
+				            });
+			            }, false);
+		            })();
+                </script>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-orange-secondary" data-dismiss="modal"> <i class="fas fa-times"></i>Fermer</button>
             </div>
         </div>
     </div>
@@ -168,10 +263,6 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<footer>
-    <% include ../views/partials/footer %>
-
-</footer>
+<% include ../views/partials/footer %>
 </body>
 </html>

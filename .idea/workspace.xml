@@ -2,12 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12f06f82-92d3-41ae-b2e0-da5dc7a7e412" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/adminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/adminController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ateliersControllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ateliersControllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/ateliersPublicsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/ateliersPublicsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/controllerAffecter.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/controllerAffecter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/reservationsController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/reservationsController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/rolesController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/utilisateursController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/utilisateursController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/ateliersModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/ateliersModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/groupesModel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/utilisateurs.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/utilisateurs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/admin/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/admin/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/atelier/reservAtelier.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/atelier/reservAtelier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/ateliers/ateliersRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/ateliers/ateliersRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index/ateliersPublicsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index/ateliersPublicsRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/reservations/reservationsRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/reservations/reservationsRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/roles/rolesroute.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/testnavbar.ejs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/views/admin/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ateliers/addAteliers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/ateliers/addAteliers.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/ateliers/ateliers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/ateliers/ateliers.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index/ateliersPublics.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index/ateliersPublics.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/footer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/head.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/partials/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/partials/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/test.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/utilisateurs/addUtilisateur.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/utilisateurs/utilisateurs.ejs" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,65 +53,44 @@
       <file leaf-file-name="atelierList.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/admin/atelierList.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
+            <state relative-caret-position="1170">
               <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.ejs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/admin/index.ejs">
+        <entry file="file://$PROJECT_DIR$/views/index.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-              <folding>
-                <element signature="e#964#971#1#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="253" column="121" selection-start-line="253" selection-start-column="121" selection-end-line="253" selection-end-column="121" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
+      <file leaf-file-name="ateliers.ejs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+            <state relative-caret-position="-3480">
+              <caret line="5" column="75" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/admin/admin.js">
+      <file leaf-file-name="ateliersPublics.ejs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/index/ateliersPublics.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="37" column="55" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="55" />
+            <state relative-caret-position="740">
+              <caret line="198" column="168" selection-start-line="198" selection-start-column="168" selection-end-line="198" selection-end-column="168" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-810">
-              <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reservAtelier.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/atelier/reservAtelier.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
+            <state relative-caret-position="300">
+              <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -117,30 +122,30 @@
         <option value="$PROJECT_DIR$/public/js/atelier/reservAtelier.js" />
         <option value="$PROJECT_DIR$/models/utilisateurs.js" />
         <option value="$PROJECT_DIR$/models/adminModel.js" />
-        <option value="$PROJECT_DIR$/views/index.ejs" />
         <option value="$PROJECT_DIR$/public/js/admin/adminUpdateUser.js" />
         <option value="$PROJECT_DIR$/models/ateliersModel.js" />
         <option value="$PROJECT_DIR$/controllers/ateliersControllers.js" />
         <option value="$PROJECT_DIR$/controllers/controllerAffecter.js" />
-        <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
         <option value="$PROJECT_DIR$/public/js/atelier/editAtelier.js" />
         <option value="$PROJECT_DIR$/views/admin/addAdmin.ejs" />
         <option value="$PROJECT_DIR$/views/admin/login.ejs" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/views/partials/header.ejs" />
         <option value="$PROJECT_DIR$/controllers/reservationsController.js" />
-        <option value="$PROJECT_DIR$/views/index/ateliersPublics.ejs" />
         <option value="$PROJECT_DIR$/views/admin/userList.ejs" />
         <option value="$PROJECT_DIR$/views/admin/partials/header.ejs" />
         <option value="$PROJECT_DIR$/views/ateliers/addAteliers.ejs" />
-        <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/views/admin/partials/footer.ejs" />
         <option value="$PROJECT_DIR$/views/admin/atelierList.ejs" />
         <option value="$PROJECT_DIR$/routes/admin/admin.js" />
         <option value="$PROJECT_DIR$/public/js/admin/main.js" />
-        <option value="$PROJECT_DIR$/views/admin/index.ejs" />
         <option value="$PROJECT_DIR$/controllers/adminController.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/bin/www" />
+        <option value="$PROJECT_DIR$/views/admin/index.ejs" />
+        <option value="$PROJECT_DIR$/views/ateliers/ateliers.ejs" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
+        <option value="$PROJECT_DIR$/views/index/ateliersPublics.ejs" />
+        <option value="$PROJECT_DIR$/views/index.ejs" />
       </list>
     </option>
   </component>
@@ -178,6 +183,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -209,21 +215,7 @@
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="atelier" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
@@ -246,19 +238,6 @@
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
               <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Cooking-Lab" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Cooking-Lab" type="b2602c69:ProjectViewProjectNode" />
@@ -276,7 +255,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -325,45 +303,35 @@
       <workItem from="1531115962944" duration="8698000" />
       <workItem from="1531195935567" duration="4037000" />
       <workItem from="1531200026170" duration="25963000" />
+      <workItem from="1531327277815" duration="3116000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104982000" />
+    <option name="totallyTimeSpent" value="108098000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1734" height="707" extended-state="0" />
+    <frame x="-7" y="0" width="1734" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1821934" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12264151" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32928804" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2846154" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.2675522" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18500407" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1227608" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2846154" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.27511415" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="7" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,13 +348,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/test.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/test.ejs" />
     <entry file="file://$PROJECT_DIR$/routes/routeTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -404,27 +366,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/utilisateurs/addUtilisateur.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/views/utilisateurs/addUtilisateur.ejs" />
     <entry file="file://$PROJECT_DIR$/controllers/uploadFile.js" />
     <entry file="file://$PROJECT_DIR$/routes/utilisateurs.js" />
     <entry file="file://$PROJECT_DIR$/public/img/uploads/V1920x1200_Blue1.jpg" />
     <entry file="file://$PROJECT_DIR$/routes/ateliersRoute.js" />
-    <entry file="file://$PROJECT_DIR$/controllers/rolesController.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/groupesModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="58" selection-start-line="5" selection-start-column="58" selection-end-line="5" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/rolesController.js" />
+    <entry file="file://$PROJECT_DIR$/models/groupesModel.js" />
     <entry file="file://$PROJECT_DIR$/routes/users/users.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -554,13 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/ateliers/addAteliers.ejs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
@@ -575,27 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index/ateliersPublics.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/atelier/editAtelier.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -607,13 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="9" column="51" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
         </state>
       </provider>
     </entry>
@@ -633,8 +546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/admin/admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="46" selection-end-line="37" selection-end-column="55" />
+        <state relative-caret-position="1110">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
         </state>
       </provider>
     </entry>
@@ -645,41 +558,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/atelierList.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/admin/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="570">
           <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admin/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding>
-            <element signature="e#964#971#1#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
+        <state relative-caret-position="270">
           <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/adminController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="30" column="29" lean-forward="true" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+        <state relative-caret-position="960">
+          <caret line="74" column="14" lean-forward="true" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/www">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="50" selection-start-line="14" selection-start-column="50" selection-end-line="14" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admin/atelierList.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="253" column="121" selection-start-line="253" selection-start-column="121" selection-end-line="253" selection-end-column="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/ateliers/ateliers.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3480">
+          <caret line="5" column="75" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index/ateliersPublics.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="198" column="168" selection-start-line="198" selection-start-column="168" selection-end-line="198" selection-end-column="168" />
         </state>
       </provider>
     </entry>

@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 
 // Schema de données de la collection ateliers
 var ateliersSchema = new mongoose.Schema ({
-    id_cuisinier: [{type: mongoose.Schema.ObjectId, ref: 'utilisateur'}],
     titre : String,
     description : String,
     date : String,

@@ -14,6 +14,7 @@ ateliersController.creer = function(req, res){
 		id: req.session.userId,
 		role: req.session.userRole,
 		username: req.session.userName,
+		
 	});
 };
 
@@ -22,7 +23,6 @@ ateliersController.save = function(req, res){
 	// fonction qui permet de deplacer l'image uploader dans un dossier précis
 	if (req.files.img) {
         var img = req.files.img;
-        //console.log(img);
         img.mv('public/img/uploads/' + img.name, function (err) {
             if (err) {
                 console.log("error =>", err)
@@ -93,7 +93,6 @@ ateliersController.edit = function(req, res){
 	}else {
 		var img = req.body.currentImg;
 	}
-    console.log(time);
 	ateliers.findByIdAndUpdate(id, {
 		$set: {
 			titre: titre,
@@ -117,7 +116,6 @@ ateliersController.edit = function(req, res){
 // desactiver de l'atelier
 ateliersController.desactiver = function(req, res){
 	var id = req.params.id;
-
 	ateliers.findByIdAndUpdate(id, {
 		$set: {
 			statut: false,

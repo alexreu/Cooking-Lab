@@ -10,6 +10,7 @@ utilisateursController.home = function(req, res){
         username: req.session.userName,
 	    id: req.session.userId,
 		role: req.session.userRole,
+		message : "Cooking'Lab - Accueil",
     })
 };
 
@@ -30,7 +31,6 @@ utilisateurs.schema.pre('save', function (next) {
 //fonction qui permet l'enregistrement d'un nouvel utilisateur
 utilisateursController.save = function(req, res){
     var utilisateur = new utilisateurs (req.body);
-
     utilisateur.save(function(err, result){
         console.log(result);
         if(err){
@@ -50,8 +50,6 @@ utilisateursController.save = function(req, res){
 utilisateursController.login = function(req, res){
 	var email = req.body.email;
 	var password = req.body.password;
-	console.log(email);
-	console.log(password);
 	utilisateurs.findOne({email: email }).exec(function (err, user) {
 		console.log(err, user);
 		if(!err && user){

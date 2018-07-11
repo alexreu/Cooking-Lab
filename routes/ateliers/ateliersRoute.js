@@ -5,7 +5,6 @@ var atelierAffecterController = require('../../controllers/controllerAffecter')
 var ateliers = require("../../controllers/ateliersControllers");
 
 // fonction qui empeche l'acces a la route si la session n'est pas definie
-// TODO utiliser ACL
 function requireLogin (req, res, next) {
 	if (req.session && req.session.userId && req.session.userRole === 'cuisinier') {
 		next();
@@ -28,14 +27,14 @@ router.post('/save', requireLogin, ateliers.save);
 // route peremettant d'éditer un atelier
 router.post('/edit', requireLogin, ateliers.edit);
 
-// route peremmant de désactiver un atelier
+// route peremettant de désactiver un atelier
 router.get('/desactiver/:id', ateliers.desactiver);
 
-// route peremmant d'activer un atelier
+// route peremettant d'activer un atelier
 router.get('/activer/:id', ateliers.activer);
 
 
-// module permettant d'exporter router
+// module peremettant d'exporter router
 module.exports = router;
 
 

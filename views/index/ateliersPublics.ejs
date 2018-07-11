@@ -7,10 +7,10 @@
 </head>
 
 <body>
-<header>
+
     <%include ../partials/header %>
-</header>
-<section class="container ">
+
+<section class="container" role="main">
     <h1 class="text-center orange pt-5">Nos ateliers du moment</h1>
 
     <p class="text-center dark py-5">Plutôt viande ou plutôt légumes ? Envie de maîtriser la cuisson d'un moelleux au chocolat ou la préparation de délicieux smoothies ? Découvrez dès à présent nos ateliers disponibles.</p>
@@ -39,9 +39,12 @@
                     <form id="<%= element._id %>" action=/reservationsRoute/save method="post">
                         <input type="hidden" value="<%= element._id %>" name="id_atelier">
                         <% if(element.nb_place_res === element.nb_place_disp) { %>
-                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>"  disabled >Complet</button>
-                        <% } else{ %>
-                        <button type="submit" class="reservButton pink py-2 px-3" data-id="<%= element._id %>">S'inscrire</button>
+                        <button type="submit" class="pink disabled reservButton" data-id="<%= element._id %>" disabled>Complet</button>
+                        <% } else if(id) { %>
+                        <button type="submit" class="reservButton pink py-2 px-3" data-id="<%= element._id %>"aria-label="s'inscrire à un atelier"><i class="fas fa-pencil-alt"></i> S'inscrire à l'atelier</button>
+                        <% } %>
+                        <% if(!id){ %>
+                        <a href="#inscription-utilisateur" data-toggle="modal" class="reservButton pink py-2 px-3" data-id="<%= element._id %>" aria-label="créer un compte"><i class="fas fa-user-plus"></i> S'inscrire</a>
                         <% } %>
                     </form>
                 </div>
@@ -63,36 +66,77 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="utilisateurs/save" method="post">
+                <form action="utilisateurs/save" method="post" class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="nom">Nom</label>
-                        <input type="text" class="form-control" id="nom" name="nom" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{1,}" id="nom" name="nom" required>
+                        <div class="invalid-feedback">
+                            Entrez un nom valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="prenom">Prénom</label>
-                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                        <input type="text" class="form-control" pattern="[A-Za-z]{1,}" id="prenom" name="prenom" required>
+                        <div class="invalid-feedback">
+                            Entrez un prénom valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
                         <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">
+                            Entrez un email valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Numéro de mobile</label>
-                        <input type="number"  class="form-control" id="mobile" name="telephone">
+                        <input type="tel"  class="form-control" id="mobile" pattern="[0-9]{10}" minlength="10" maxlength="10"  name="telephone">
+                        <div class="invalid-feedback">
+                            Entrez un numéro de mobile valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mot de passe</label>
-                        <input type="password"  class="form-control" id="password" name="password">
+                        <input type="password"  class="form-control" id="password" name="password" required>
+                        <div class="invalid-feedback">
+                            Entrez un mot de passe valide.
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Confirmer votre mot de passe</label>
-                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf">
+                        <input type="password"  class="form-control" id="passwordConf" name="passwordConf" required>
+                        <div class="invalid-feedback">
+                            Les deux mot de passe ne sont pas identiques
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Inscription</button>
+                    <div class="row">
+                        <button type="submit" class="btn btn-orange ml-3 mr-3"><i class="fas fa-user-plus"></i> Inscription</button>
+                        <button type="reset" class="btn btn-orange"><i class="fas fa-ban"></i> Annuler la saisie</button>
+                    </div>
                 </form>
+                <script>
+		            // Example starter JavaScript for disabling form submissions if there are invalid fields
+		            (function() {
+			            'use strict';
+			            window.addEventListener('load', function() {
+				            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+				            var forms = document.getElementsByClassName('needs-validation');
+				            // Loop over them and prevent submission
+				            var validation = Array.prototype.filter.call(forms, function(form) {
+					            form.addEventListener('submit', function(event) {
+						            if (form.checkValidity() === false) {
+							            event.preventDefault();
+							            event.stopPropagation();
+						            }
+						            form.classList.add('was-validated');
+					            }, false);
+				            });
+			            }, false);
+		            })();
+                </script>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-orange-secondary" data-dismiss="modal" aria-label="fermer le formulaire d'inscription"><i class="fas fa-times"></i> Fermer</button>
             </div>
         </div>
     </div>
@@ -110,20 +154,49 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="utilisateurs/login" method="post">
+                <form action="utilisateurs/login" method="post" class="needs-validation" novalidate>
                     <div class="form-group">
                         <label for="nom">Adresse Mail</label>
                         <input type="text" class="form-control" id="emailLogin" name="email" required>
+                        <div class="invalid-feedback">
+                            Entrez une adresse mail
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="prenom">Mot de passe</label>
                         <input type="password" class="form-control" id="passwordLogin" name="password" required>
+                        <div class="invalid-feedback">
+                            Entrez un mot de passe
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Connexion</button>
+                    <div class="row">
+                        <button type="submit" class="btn btn-orange ml-3 mr-3"><i class="fas fa-sign-in-alt"></i> Connexion</button>
+                        <button type="reset" class="btn btn-orange"><i class="fas fa-ban"></i> Annuler la saisie</button>
+                    </div>
                 </form>
+                <script>
+		            // Example starter JavaScript for disabling form submissions if there are invalid fields
+		            (function() {
+			            'use strict';
+			            window.addEventListener('load', function() {
+				            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+				            var forms = document.getElementsByClassName('needs-validation');
+				            // Loop over them and prevent submission
+				            var validation = Array.prototype.filter.call(forms, function(form) {
+					            form.addEventListener('submit', function(event) {
+						            if (form.checkValidity() === false) {
+							            event.preventDefault();
+							            event.stopPropagation();
+						            }
+						            form.classList.add('was-validated');
+					            }, false);
+				            });
+			            }, false);
+		            })();
+                </script>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-orange-secondary" data-dismiss="modal" aria-label="fermer le formulaire de connexion"><i class="fas fa-times"></i> Fermer</button>
             </div>
         </div>
     </div>

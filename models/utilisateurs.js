@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-// Schéma de données de la collection participants
+// Schéma de données des utilisateurs
 var utilisateursSchema = new mongoose.Schema({
     nom : String,
     prenom : String,
@@ -11,8 +11,10 @@ var utilisateursSchema = new mongoose.Schema({
     telephone : String,
 	password: String,
 	passwordConf: String,
-    role: String,
-        
+    role: {
+        type: String,
+        default: "utilisateur",
+    },
 });
 
 // Module qui permet d'exporter le modèle du schéma de données de la collection participants 

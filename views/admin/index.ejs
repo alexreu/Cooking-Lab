@@ -11,14 +11,6 @@
 </head>
 <body>
     <% include partials/header.ejs%>
-    <% if(message) {%>
-    <div class="alert alert-success" role="alert">
-        <%= message %>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-    <% } %>
     <div class="container">
         <h1 class="text-center">Welcome ! </h1>
         <h3 class="text-center">Nous sommes le : <%= date %></h3>

@@ -6,6 +6,10 @@ body {
   width: 100%;
   background: rgba(0,0,0,0.5);
 }
+a {
+  text-decoration: none !important;
+  transition: 0.25s linear;
+}
 /* orange  */
 .orange {
   color: #f3671f;
@@ -16,6 +20,9 @@ body {
   color: #d05c62;
 }
 
+h1,h2,h5 {
+  font-family : "Roboto" ;
+}
 .addB {
   border : 3px solid #d05c62;
   border-radius : 6px ;
@@ -61,11 +68,13 @@ body {
 }
 
 /* mouse over link */
+.mail{
+  transition: 0.25s linear;
+  text-decoration: none !important;
+}
 .mail:hover {
   color: fuchsia;
 }
-
-
 .inactive-card {
   filter: grayscale(100%);
 }
@@ -75,4 +84,46 @@ body {
 
 a:hover {
   color: #401c1e;
+}
+
+/* index */
+#img-left{
+  height: 40vh;
+  background: url("../img/photo10.png"), no-repeat;
+  background-size: cover;
+}
+#img-right{
+  height: 40vh;
+  background: url("../img/photo2.png"), no-repeat;
+  background-size: cover;
+}
+.card-hover{
+  transition: 0.25s linear;
+}
+.card-hover:hover{
+  transform: scale(1.08);
+}
+.logo-footer{
+  transition: 0.25s linear;
+  cursor: pointer;
+}
+.logo-footer:hover{
+  transform: scale(1.2);
+}
+.first-letter{
+  font-size: 25px;
+  color : #d05c62 ;
+}
+.btn-orange{
+  background: #f3671f;
+  color: #fff;
+  border: #f3671f;
+}
+.btn-orange-secondary{
+  background: #d05c62;
+  color: #fff;
+  border: #d05c62;
+}
+.pt-120{
+  padding-top: 120px;
 }
