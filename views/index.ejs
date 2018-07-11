@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    
+
     <% include ../views/partials/head %>
 
 </head>
@@ -10,7 +10,7 @@
     <% include ../views/partials/header %>
 </header>
 
-<section class="container-fluid text-center partone d-flex align-items-center">
+<section class="container-fluid text-center partone d-flex align-items-center p-0">
     <div id="overlay"  class="d-flex align-items-center">
         <div class="jumbotron bg-transparent  ">
             <h1 class="display-5 text-white ">Healthy and Good ! Apprenez ou ré-apprenez les bases de la cuisine saine et savoureuse.</h1>
@@ -20,12 +20,19 @@
 
 <section class="container dark py-5">
     <h2 class="text-center">Marre de manger des pâtes ou d'engloutir à la va-vite des plats préparés fades, onéreux et pas vraiment nutritifs ?</h2>
-    <div class="row pt-3">
-        <p class="col-md-6 col-sm-12">Cooking'Lab, ce sont des ateliers de cuisine où l'on se sent comme à la maison! Guidés par un chef cuisinier qualifié, vous expérimentez et créez votre plat, en choisissant le niveau de difficulté et les ustensiles qui vous conviennent.  Nous privilégions les produits sains, locaux et frais! Notre leitmotiv : que ce soit délicieux pour votre palais et pour votre corps! Nous mettons également un point d'honneur à ce que vous puissiez reproduire aisément les recettes chez vous. </p>
-        <p class="col-md-6 col-sm-12">Pour que la cuisine devienne un véritable plaisir et un moment de détente dans votre journée déjà bien remplie ! Pour participer à l'un de nos cours, rien de plus simple : il vous suffit de créer un compte, et ensuite vous inscrire à l'atelier qui vous plaît. Parcourez notre liste, il y en a pour tous les goûts! Le paiement s'effectue sur place, avant de débuter l'activité. Après chaque session, vous aurez le plaisir de déguster vos réalisations en toute convivialité.</p>
+    <div class="row pt-5 align-items-center">
+        <div class="col-md-6" id="img-left"></div>
+        <div class="col-md-6">
+            <p class="">Cooking'Lab, ce sont des ateliers de cuisine où l'on se sent comme à la maison! Guidés par un chef cuisinier qualifié, vous expérimentez et créez votre plat, en choisissant le niveau de difficulté et les ustensiles qui vous conviennent.  Nous privilégions les produits sains, locaux et frais! Notre leitmotiv : que ce soit délicieux pour votre palais et pour votre corps! Nous mettons également un point d'honneur à ce que vous puissiez reproduire aisément les recettes chez vous. </p>
+        </div>
+    </div>
+    <div class="row pt-5 align-items-center">
+        <div class="col-md-6">
+            <p class="">Pour que la cuisine devienne un véritable plaisir et un moment de détente dans votre journée déjà bien remplie ! Pour participer à l'un de nos cours, rien de plus simple : il vous suffit de créer un compte, et ensuite vous inscrire à l'atelier qui vous plaît. Parcourez notre liste, il y en a pour tous les goûts! Le paiement s'effectue sur place, avant de débuter l'activité. Après chaque session, vous aurez le plaisir de déguster vos réalisations en toute convivialité.</p>
+        </div>
+        <div class="col-md-6" id="img-right"></div>
     </div>
 </section>
-
 <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -51,41 +58,34 @@
 
     </div>
 </div>
-
 <section class="container-fluid populaire py-5 mt-5">
-        <h2 class="text-center my-2 pb-5 text-white">Nos ateliers les plus populaires</h2>
-        <div class="container align-items-center">
+    <h2 class="text-center my-2 pb-5 text-white">Nos ateliers les plus populaires</h2>
+    <div class="container align-items-center">
         <div class="card-deck justify-content-around">
-
-                <div class="card">
-                    <img class="card-img-top" src="img/photo1.png " alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Apprenez à faire des burgers à la maison, meilleurs qu'au fast-food !</h5>
-                    </div>
+            <div class="card card-hover">
+                <img class="card-img-top" src="img/photo1.png " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Apprenez à faire des burgers à la maison, meilleurs qu'au fast-food !</h5>
                 </div>
-                <div class="card" >
-                    <img class="card-img-top" src="img/photo6.png " alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Découvrez la côte de boeuf, cuisson et accompagnements</h5>
-                    </div>
+            </div>
+            <div class="card card-hover">
+                <img class="card-img-top" src="img/photo6.png " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Découvrez la côte de boeuf, cuisson et accompagnements</h5>
                 </div>
-                <div class="card" >
-                    <img class="card-img-top" src="img/photo9.png " alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Soupes chaudes et froides : comment consommer des légumes à toutes les saisons.</h5>
-                    </div>
+            </div>
+            <div class="card card-hover">
+                <img class="card-img-top" src="img/photo9.png " alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Soupes chaudes et froides : comment consommer des légumes à toutes les saisons.</h5>
                 </div>
+            </div>
         </div>
-        </div>
-        <div class="text-center container">
-            <a href="../ateliersPublicsRoute" class="btn  btn-outline-light mt-5">Découvrez tous nos ateliers</a>
-        </div>
+    </div>
+    <div class="text-center container">
+        <a href="../ateliersPublicsRoute" class="btn  btn-outline-light mt-5">Découvrez tous nos ateliers</a>
+    </div>
 </section>
-
-
-
-
-
 <!-- debut modal inscription utilisateur -->
 <div class="modal fade" id="inscription-utilisateur" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -116,7 +116,7 @@
                     </div>
                     <div class="form-group">
                         <label for="mobile">Mot de passe</label>
-                        <input type="password"  class="form-control" id="password" name="password" required> 
+                        <input type="password"  class="form-control" id="password" name="password" required>
                     </div>
                     <div class="form-group">
                         <label for="mobile">Confirmer votre mot de passe</label>
@@ -166,10 +166,9 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 <footer>
     <% include ../views/partials/footer %>
 

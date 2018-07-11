@@ -64,11 +64,13 @@ h1,h2,h5 {
 }
 
 /* mouse over link */
+.mail{
+  transition: 0.25s linear;
+  text-decoration: none !important;
+}
 .mail:hover {
   color: fuchsia;
 }
-
-
 .inactive-card {
   filter: grayscale(100%);
 }
@@ -78,4 +80,29 @@ h1,h2,h5 {
 
 a:hover {
   color: #401c1e;
+}
+
+/* index */
+#img-left{
+  height: 40vh;
+  background: url("../img/photo10.png"), no-repeat;
+  background-size: cover;
+}
+#img-right{
+  height: 40vh;
+  background: url("../img/photo2.png"), no-repeat;
+  background-size: cover;
+}
+.card-hover{
+  transition: 0.25s linear;
+}
+.card-hover:hover{
+  transform: scale(1.08);
+}
+.logo-footer{
+  transition: 0.25s linear;
+  cursor: pointer;
+}
+.logo-footer:hover{
+  transform: scale(1.2);
 }
