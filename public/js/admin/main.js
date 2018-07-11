@@ -11,5 +11,16 @@ $(function(){
         $('#ajoutAdmin').addClass('active');
     }
 
+    $('.delAffect').on('click', function () {
+        var id = $(this).data('id');
+        console.log(id);
+        $.post("http://localhost:3012/admin/delAffect",
+            {
+                id: id
+            }, function (result) {
+                console.log(result);
+	        }
+            )
+    })
 
 });

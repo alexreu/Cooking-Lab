@@ -4,6 +4,7 @@ var users = require('../models/utilisateurs');
 var bcrypt = require('bcrypt');
 var user = require('../models/utilisateurs');
 var atelier = require('../models/ateliersAffecter');
+var atelierNoAffect = require('../models/ateliersModel');
 
 
 var adminController = {};
@@ -19,7 +20,7 @@ adminController.index = function(req, res){
     var dd = date.getDate();
     var mm = date.getMonth();
     var yy = date.getFullYear();
-    var dateFormat = dd + "-" + mm + "-" + yy
+    var dateFormat = dd + "/" + mm + "/" + yy;
     res.render('../views/admin/index', {
         adminId: req.session.adminId,
         adminMail: req.session.adminMail,
@@ -52,7 +53,6 @@ adminController.listAtelier = function(req, res){
     atelier.find({}).
     populate('id_atelier').
     populate('id_cuisinier').exec(function (err, atelier) {
-        console.log(atelier[15]);
         if(!err){
             res.render('../views/admin/atelierList', {
                 atelier: atelier,
@@ -156,8 +156,10 @@ adminController.delete = function(req, res){
 // fonction suppression d'un atelier
 adminController.deleteAtelier = function(req, res){
   var id = req.params.id;
-  atelier.findByIdAndDelete(id, function (err, result) {
+  console.log("je suis id en param",id);
+	atelierNoAffect.findByIdAndDelete(id, function (err, result) {
       console.log('atelier supprimé =>', result);
+      console.log("error =>", err);
       if(!err){
           res.redirect('/admin/atelier');
       }else{
@@ -166,6 +168,19 @@ adminController.deleteAtelier = function(req, res){
   })
 };
 
+//fonction suppression affectation atelier
+adminController.delAffect = function(req, res){
+    var id = req.body.id;
+    atelier.findByIdAndDelete(id, function (err, result) {
+        if(!err){
+            console.log("success", result);
+            res.redirect('/admin/atelier')
+        }else{
+            console.log("error =>", err);
+	        res.redirect('/admin/atelier')
+        }
+    })
+}
 // fonction deconnexion admin
 adminController.logout = function(req,res){
     if(req.session){
