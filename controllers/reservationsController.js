@@ -10,7 +10,7 @@ reservationsController.list = function(req, res){
     populate('id_user').
     populate('id_ateliers').exec(function (err, ateliers) {
         if(!err){
-            console.log(req.session.userRole);
+            
             res.render('../views/mesAteliers',
                 {
                     ateliers: ateliers,
