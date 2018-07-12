@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="fr">
+<!-- views/partials/head.ejs -->
+<head>
+    <title><%= message %></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/logo.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+
+    <!--Stylesheet css-->
+    <link rel="stylesheet" href="../stylesheets/style.css">
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!--Font awesome Icons-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+</head>
+
+<body>
+<!--views/partials/header.ejs-->
+<header>
+    <nav class="navbar navbar-expand-lg container-fluid bg-light fixed-top">
+        <a class="navbar-brand " href="#">
+            <img src="../img/logo.png" width="80" height="80" class="d-inline-block align-top" alt="Logo marmite">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="dark text-uppercase"><i class="fas fa-align-justify fa-lg"></i> Menu</span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav w-100 justify-content-around align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link display-4 orange font-weight-bold" href="/" aria-label="retour à l'accueil">Cooking'Lab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link orange font-weight-bold" href="/" aria-label="retour à l'accueil">Accueil</a>
+                </li>
+                <% if(role !== 'cuisinier') { %>
+                <li class="nav-item">
+                    <a class="nav-link orange font-weight-bold" href="/ateliersPublicsRoute" aria-label="aller à la page des ateliers">Nos ateliers de cuisine</a>
+                </li>
+                <% } %>
+                <% if(id && role === 'cuisinier') { %>
+                <li class="nav-item">
+                    <a class="nav-link orange font-weight-bold" href="/ateliersRoute" aria-label="aller à la page de gestion des ateliers">Gérer mes ateliers</a>
+                </li>
+                <% } %>
+                <% if(!id && !username) { %>
+                <li class="nav-item">
+                    <a href="#inscription-utilisateur" data-toggle="modal" class="nav-item orange font-weight-bold" aria-label="aller sur la page d'inscription">Inscription</a>
+                </li>
+                <li class="nav-item ml-2">
+                    <a href="#connexion-utilisateur" data-toggle="modal" class="nav-item orange font-weight-bold" aria-label="aller à la page d'authentification">Connexion</a>
+                </li>
+                <% } %>
+                <% if(id && username) { %>
+                <li>
+                    <a href="/reservationsRoute/mesAteliers" class="font-weight-bold pimky m-0">Mes ateliers</a>
+                </li>
+                <li>
+                    <p class="font-weight-bold pimky m-0">Bonjour <%= username %> !</p>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link pink font-weight-bold" aria-label="se déconnecter de la session">Deconnexion</a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+</header>
+<section class="container pt-120">
+    <div class="row">
+        <% ateliers.forEach(function(element) { %>
+            <% element.id_user.forEach(function(user) { %>
+                <% if(user._id == id) { %>
+                    <%element.id_ateliers.forEach(function(element){ %>
+                    <div class="card shadow p-1 mb-2 bg-white rounded " style="width: 18rem;">
+                        <!-- gérer la gestion des images ajout d'une pièce jointe -->
+                        <img class="card-img-top" src="../img/uploads/<%=element.img%> " alt="Card image cap">
+                        <div class="card-body">
+                            <div class="row">
+                                <p class="col-7 card-text dark"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
+                                <p class="col-5 card-text dark"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
+                            </div>
+                            <p class="card-text dark"><i class="fas fa-euro-sign orange"></i> <%=element.prix%> / personne</p>
+
+                            <h5 class="card-title pimky font-weight-bold"><%=element.titre%></h5>
+                            <div class="mb-3" style="height:auto">
+                                <p class="card-text dark"> Description : <%=element.description%></p>
+                            </div>
+                            <p class="card-text dark"><i class="fas fa-users orange"></i> Places réservées  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
+                            <p class="card-text dark"><i class="fas fa-hourglass-half orange"></i> Durée : <%=element.duree%> H</p>
+                        </div>
+                    </div>
+                    <% }) %>
+                <% } %>
+            <% }) %>
+        <% }) %>
+    </div>
+
+</section>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="./js/atelier/editAtelier.js"></script>
+<script src="../js/atelier/reservAtelier.js"></script>
+
+<!--views/partials/footer.ejs-->
+<footer>
+    <section class="container-fluid footer dark mt-5">
+        <div class="container text-center">
+            <h2 class="font-weight-bold marque pt-3 pb-0">Cooking'Lab</h2>
+            <small>3 rue des Épicuriens</small> <br>
+            <small><a class="mail" href="mailto:contact@cooking-lab.fr" aria-label="envoyer un email à cooking lab">Nous envoyer un mail</a></small>
+        </div>
+        <div class="text-center my-3">
+            <i class="fab fa-facebook-f fa-2x mx-2 logo-footer"></i>
+            <i class="fab fa-instagram fa-2x mx-2 logo-footer"></i>
+            <i class="fab fa-linkedin-in fa-2x mx-2 logo-footer"></i>
+        </div>
+        <div class="text-center">
+            <small>ALEJENADA  -  <i class="far fa-copyright"></i>Copyright 2018  -  Tous droits réservés - Certifié W3C</small>
+        </div>
+    </section>
+</footer>
+</body>
+</html>

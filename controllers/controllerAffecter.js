@@ -10,6 +10,7 @@ atelierAffecterController.lister= function (req, res){
     populate('id_cuisinier').
     exec(function(err, ateliers){
 		if (!err){
+		    console.log(ateliers);
             res.render("../views/ateliers/ateliers", {
                 data: ateliers,
                 id: req.session.userId,
