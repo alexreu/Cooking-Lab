@@ -32,7 +32,6 @@ utilisateurs.schema.pre('save', function (next) {
 utilisateursController.save = function(req, res){
     var utilisateur = new utilisateurs (req.body);
     utilisateur.save(function(err, result){
-        console.log(result);
         if(err){
         //req.body.error = 'Echec création utilisateur'
             console.log(err);
@@ -40,6 +39,7 @@ utilisateursController.save = function(req, res){
         } else{
             console.log("creation utilisateur OK");
          //   req.session.success = 'Utilisateur créé et enregistré avec succès'
+			res.status(201);
             res.redirect("/");
     
         } 
@@ -59,6 +59,7 @@ utilisateursController.login = function(req, res){
 					req.session.userName = user.prenom;
 					req.session.userId = user._id;
 					req.session.userRole = user.role;
+					res.status(202);
 					res.redirect('/');
 				}else {
 					console.log('err =>', err);
