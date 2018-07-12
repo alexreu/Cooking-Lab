@@ -18,7 +18,7 @@
                 </li>
                 <% if(role !== 'cuisinier') { %>
                 <li class="nav-item">
-                    <a class="nav-link orange font-weight-bold" href="/ateliersPublicsRoute" aria-label="aller à la page des ateliers">Nos ateliers de cuisine</a>
+                    <a class="nav-link orange font-weight-bold" href="/ateliersPublicsRoute" aria-label="aller à la page des ateliers">Nos ateliers</a>
                 </li>
                 <% } %>
                 <% if(id && role === 'cuisinier') { %>
@@ -34,10 +34,12 @@
                     <a href="#connexion-utilisateur" data-toggle="modal" class="nav-item orange font-weight-bold" aria-label="aller à la page d'authentification">Connexion</a>
                 </li>
                 <% } %>
-                <% if(id && username) { %>
+                <% if (id && role !=='cuisinier') { %>
                 <li>
                     <a href="/reservationsRoute/mesAteliers" class="font-weight-bold pimky m-0">Mes ateliers</a>
                 </li>
+                <% } %>
+                <% if(id && username) { %>
                 <li>
                     <p class="font-weight-bold pimky m-0">Bonjour <%= username %> !</p>
                 </li>
