@@ -9,7 +9,7 @@ utilisateursController.home = function(req, res){
     res.render('../views/index', {
         username: req.session.userName,
 	    id: req.session.userId,
-		role: req.session.userRole,
+        role: req.session.userRole,
 		message : "Cooking'Lab - Accueil",
     })
 };
@@ -31,19 +31,25 @@ utilisateurs.schema.pre('save', function (next) {
 //fonction qui permet l'enregistrement d'un nouvel utilisateur
 utilisateursController.save = function(req, res){
     var utilisateur = new utilisateurs (req.body);
-    utilisateur.save(function(err, result){
-        if(err){
-        //req.body.error = 'Echec création utilisateur'
-            console.log(err);
-            res.redirect("/");
-        } else{
-            console.log("creation utilisateur OK");
-         //   req.session.success = 'Utilisateur créé et enregistré avec succès'
-			res.status(201);
-            res.redirect("/");
-    
-        } 
-    });
+    var password = req.body.password;
+
+    var passwordConf = req.body.passwordConf;
+    if (password !== passwordConf){
+    	console.log("error mot de passe non identique");
+		res.redirect('/');
+	}else{
+        utilisateur.save(function(err){
+            if(err){
+                console.log(err);
+                res.redirect("/");
+            } else{
+                console.log("creation utilisateur OK");
+                res.status(201);
+                res.redirect("/");
+
+            }
+        });
+    }
 };
 
 // fonction login utilisateurs

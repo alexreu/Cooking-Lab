@@ -5,7 +5,6 @@ var bcrypt = require('bcrypt');
 var user = require('../models/utilisateurs');
 var atelier = require('../models/ateliersAffecter');
 var atelierNoAffect = require('../models/ateliersModel');
-const flash = require('express-flash-notification');
 
 
 var adminController = {};
@@ -22,7 +21,6 @@ adminController.index = function(req, res){
     var mm = date.getMonth();
     var yy = date.getFullYear();
     var dateFormat = dd + "/" + mm + "/" + yy;
-	console.log(req.session);
     res.render('../views/admin/index', {
         adminId: req.session.adminId,
         adminMail: req.session.adminMail,
@@ -65,7 +63,8 @@ adminController.listAtelier = function(req, res){
             })
         }
     })
-}
+};
+
 // fonction qui hash le mot de passe et qui le met en bdd
 admins.schema.pre('save', function (next) {
     var admin = this;
@@ -105,7 +104,6 @@ adminController.auth = function(req, res){
                 if(result){
                     req.session.adminId = admin._id;
                     req.session.adminMail = admin.mail;
-                    //req.flash('success', 'Connexion Réussi');
                     res.redirect('/admin/index/');
                 }else {
                     console.log("err =>", err);
@@ -181,7 +179,8 @@ adminController.delAffect = function(req, res){
             res.redirect('/admin/atelier')
         }
     })
-}
+};
+
 // fonction deconnexion admin
 adminController.logout = function(req,res){
     if(req.session){
