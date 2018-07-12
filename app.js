@@ -10,7 +10,7 @@ var MongoStore = require('connect-mongo')(session);
 var urlDatabase = process.env.MONGO_URI;
 
 //connexion à la base de donnée
-mongoose.connect('mongodb://alexandre:alexandre974@ds127841.mlab.com:27841/cooking-lab', {useNewUrlParser: true});
+mongoose.connect(urlDatabase, {useNewUrlParser: true});
 
 var db = mongoose.connection;
 var app = express();
