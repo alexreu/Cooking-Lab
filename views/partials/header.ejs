@@ -16,9 +16,11 @@
                 <li class="nav-item">
                     <a class="nav-link orange font-weight-bold" href="/" aria-label="retour à l'accueil">Accueil</a>
                 </li>
+                <% if(role !== 'cuisinier') { %>
                 <li class="nav-item">
                     <a class="nav-link orange font-weight-bold" href="/ateliersPublicsRoute" aria-label="aller à la page des ateliers">Nos ateliers de cuisine</a>
                 </li>
+                <% } %>
                 <% if(id && role === 'cuisinier') { %>
                 <li class="nav-item">
                     <a class="nav-link orange font-weight-bold" href="/ateliersRoute" aria-label="aller à la page de gestion des ateliers">Je suis cuisinier</a>
