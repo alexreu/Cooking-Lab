@@ -77,32 +77,37 @@
     </nav>
 </header>
 <section class="container pt-120">
-    <div class="row">
-        <% ateliers.forEach(function(element) { %>
-            <% element.id_user.forEach(function(user) { %>
+    <h1 class="text-center py-5 orange">Mes Ateliers</h1>
+    <div class="row pt-5 pb-5 populaire">
+        <% ateliers.forEach(function(reservation) { %>
+            <% reservation.id_user.forEach(function(user) { %>
                 <% if(user._id == id) { %>
-                    <%element.id_ateliers.forEach(function(element){ %>
-                    <div class="card shadow p-1 mb-2 bg-white rounded " style="width: 18rem;">
-                        <!-- gérer la gestion des images ajout d'une pièce jointe -->
-                        <img class="card-img-top" src="../img/uploads/<%=element.img%> " alt="Card image cap">
-                        <div class="card-body">
-                            <div class="row">
-                                <p class="col-7 card-text dark"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
-                                <p class="col-5 card-text dark"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
-                            </div>
-                            <p class="card-text dark"><i class="fas fa-euro-sign orange"></i> <%=element.prix%> / personne</p>
+                    <%reservation.id_ateliers.forEach(function(element){ %>
+                    <div class="col-md-4">
+                        <div class="card shadow p-1 mb-2 bg-white rounded mx-auto" style="width: 18rem;">
+                            <!-- gérer la gestion des images ajout d'une pièce jointe -->
+                            <img class="card-img-top" src="../img/uploads/<%=element.img%> " alt="Card image cap">
+                            <div class="card-body">
+                                <div class="row">
+                                    <p class="col-7 card-text dark"><i class="fas fa-calendar-alt orange"></i> <%=element.date%></p>
+                                    <p class="col-5 card-text dark"><i class="fas fa-clock orange"></i> <%=element.heure_debut%></p>
+                                </div>
+                                <p class="card-text dark"><i class="fas fa-euro-sign orange"></i> <%=element.prix%> / personne</p>
 
-                            <h5 class="card-title pimky font-weight-bold"><%=element.titre%></h5>
-                            <div class="mb-3" style="height:auto">
-                                <p class="card-text dark"> Description : <%=element.description%></p>
+                                <h5 class="card-title pimky font-weight-bold"><%=element.titre%></h5>
+                                <div class="mb-3" style="height:auto">
+                                    <p class="card-text dark"> Description : <%=element.description%></p>
+                                </div>
+                                <p class="card-text dark"><i class="fas fa-users orange"></i> Places réservées  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
+                                <p class="card-text dark"><i class="fas fa-hourglass-half orange"></i> Durée : <%=element.duree%> H</p>
                             </div>
-                            <p class="card-text dark"><i class="fas fa-users orange"></i> Places réservées  : <%=element.nb_place_res%> / <%=element.nb_place_disp%></p>
-                            <p class="card-text dark"><i class="fas fa-hourglass-half orange"></i> Durée : <%=element.duree%> H</p>
+                            <a href="/reservationsRoute/delete/<%= reservation._id %>" data-id="<%= element._id %>" class="btn btn-orange-secondary delReserv">Annuler l'inscription</a>
                         </div>
                     </div>
                     <% }) %>
                 <% } %>
             <% }) %>
+
         <% }) %>
     </div>
 
@@ -114,8 +119,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="./js/atelier/editAtelier.js"></script>
-<script src="../js/atelier/reservAtelier.js"></script>
+<script src="../js/reservation/reservation.js"></script>
 
 <!--views/partials/footer.ejs-->
 <footer>

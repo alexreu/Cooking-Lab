@@ -1,6 +1,7 @@
 // export du module 
 var mongoose = require ('mongoose');
 var reservations = require('../models/reservationsModel');
+var atelier = require('../models/ateliersModel');
 
 var reservationsController = {};
 
@@ -24,8 +25,7 @@ reservationsController.list = function(req, res){
             console.log('error =>', err);
         }
     })
-}
-
+};
 
 //Fonction qui permet de sauvegarder une inscription à un atelier dans la table réservation
 reservationsController.save = function (req, res){
@@ -47,5 +47,37 @@ reservationsController.save = function (req, res){
     })
  };
 
+
+// fonction qui permet d'annuler une reservation
+reservationsController.delete = function(req, res){
+    var id = req.params.id;
+    console.log(id);
+    reservations.findByIdAndDelete(id, function (err) {
+        if(!err){
+            res.redirect('/reservationsRoute/mesAteliers')
+        }else{
+            console.log("error =>",err);
+        }
+    })
+};
+
+
+// fonction permettant de decrementer le nombre de place reservées
+reservationsController.delReserv = function(req, res){
+	var id = req.body.id;
+	console.log(id);
+	atelier.findByIdAndUpdate(id, {
+		$inc:{
+			nb_place_res:  -1,
+		}
+	}, function (err, result) {
+		console.log("result =>",result);
+		if(err){
+			console.log("error =>",err);
+		}//else{
+		// 	res.send(result);
+		// }
+	})
+};
 // exportation du controller
 module.exports= reservationsController;
